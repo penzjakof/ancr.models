@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Модельний агентство - Пасивний дохід від 500$</title>
+    
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '965688335628980');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=965688335628980&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #fff;
+            overflow-x: hidden;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .logo-3d {
+            width: 200px;
+            height: 200px;
+            margin-bottom: 40px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-3d::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #ff6b9d, #c471ed, #12c2e9);
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            filter: blur(20px);
+            opacity: 0.7;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .logo-image {
+            width: 150px;
+            height: 150px;
+            position: relative;
+            z-index: 2;
+            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
+        }
+
+        .hero-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            line-height: 1.3;
+            max-width: 400px;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 18px 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+            border: 2px solid rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .cta-button::before {
+            content: '🔗';
+            font-size: 1.2rem;
+        }
+
+        .guarantees {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .guarantee-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        /* Comparison Section */
+        .comparison-section {
+            margin-top: 40px;
+        }
+
+        .comparison-cards {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .comparison-card {
+            flex: 1;
+            background: white;
+            border-radius: 15px;
+            padding: 0;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            position: relative;
+        }
+
+        .comparison-label {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            z-index: 2;
+        }
+
+        .before-label {
+            background: #ff4757;
+            color: white;
+        }
+
+        .after-label {
+            background: #2ed573;
+            color: white;
+        }
+
+        .comparison-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .profile-info {
+            padding: 15px;
+            color: #333;
+        }
+
+        .profile-info h3 {
+            margin: 0 0 10px 0;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .profile-info p {
+            margin: 0;
+            font-size: 0.85rem;
+            line-height: 1.4;
+            color: #666;
+        }
+
+        /* Profile Creation Section */
+        .profile-creation {
+            background: white;
+            padding: 60px 0;
+            margin-top: 0;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            text-align: center;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        .divider-line {
+            width: 60px;
+            height: 2px;
+            background: #ddd;
+            margin: 0 auto 50px auto;
+        }
+
+        /* Experience Section */
+        .experience-section {
+            text-align: center;
+            position: relative;
+        }
+
+        .experience-badge {
+            display: inline-flex;
+            align-items: center;
+            background: #ff4757;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(255,71,87,0.3);
+        }
+
+        .badge-icon {
+            font-size: 1.5rem;
+            margin-right: 10px;
+        }
+
+        .badge-text {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .experience-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 30px;
+            line-height: 1.2;
+        }
+
+        .experience-images {
+            margin-top: 30px;
+        }
+
+        .experience-image {
+            width: 100%;
+            max-width: 400px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+
+        /* Account Management Section */
+        .account-management {
+            background: white;
+            padding: 60px 0;
+            margin-top: 0;
+        }
+
+        /* Gifts Section */
+        .gifts-section {
+            text-align: center;
+        }
+
+        .gifts-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            padding: 40px 20px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .gifts-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 30px;
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        .gifts-images {
+            text-align: center;
+        }
+
+        .gifts-image {
+            width: 100%;
+            max-width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+        }
+
+        /* Monetization Section */
+        .monetization-section {
+            margin-top: 40px;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .monetization-title {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .monetization-subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.4;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .cta-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .cta-button-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 18px 40px;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255,255,255,0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .cta-button-secondary:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .cta-button-secondary::before {
+            content: '🔗';
+            font-size: 1.2rem;
+        }
+
+        /* Reviews Section */
+        .reviews-section {
+            background: #2c3e50;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .reviews-title {
+            font-size: 2rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        .quote-divider {
+            margin-bottom: 40px;
+        }
+
+        .quote-symbol {
+            font-size: 2rem;
+            color: #f39c12;
+        }
+
+        .review-text {
+            font-size: 1.3rem;
+            color: white;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .review-author {
+            font-size: 1.1rem;
+            color: #bdc3c7;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .review-duration {
+            font-size: 0.9rem;
+            color: #95a5a6;
+            font-style: italic;
+        }
+
+        .review-item {
+            max-width: 600px;
+            margin: 0 auto 60px auto;
+        }
+
+        .review-item:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 80px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .contact-logo {
+            margin-bottom: 40px;
+        }
+
+        .logo-cube {
+            display: inline-block;
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .cube-logo {
+            width: 80px;
+            height: 80px;
+            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
+            border-radius: 15px;
+        }
+
+        .contact-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 40px;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .cta-button-contact {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 18px 40px;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            margin-bottom: 50px;
+            border: 2px solid rgba(255,255,255,0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .cta-button-contact:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .cta-button-contact::before {
+            content: '🔗';
+            font-size: 1.2rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .contact-item h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: rgba(255,255,255,0.8);
+            font-weight: 500;
+        }
+
+        .contact-item p {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 0;
+            color: white;
+        }
+
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(2deg); }
+        }
+
+
+
+
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 1.5rem;
+            }
+
+            .logo-3d {
+                width: 160px;
+                height: 160px;
+            }
+
+            .logo-image {
+                width: 120px;
+                height: 120px;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+
+            .guarantees {
+                font-size: 0.9rem;
+            }
+
+            .comparison-cards {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .comparison-image {
+                height: 150px;
+            }
+
+            .profile-info p {
+                font-size: 0.8rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .section-subtitle {
+                font-size: 1rem;
+            }
+
+            .experience-title {
+                font-size: 1.3rem;
+            }
+
+            .badge-text {
+                font-size: 1.5rem;
+            }
+
+            .experience-image {
+                height: 150px;
+            }
+
+            .gifts-title {
+                font-size: 1.4rem;
+                padding-left: 10px;
+            }
+
+            .gifts-image {
+                height: 150px;
+            }
+
+            .gifts-card {
+                padding: 30px 15px;
+            }
+
+            .monetization-title {
+                font-size: 1.3rem;
+            }
+
+            .monetization-subtitle {
+                font-size: 1rem;
+            }
+
+            .cta-title {
+                font-size: 1.5rem;
+            }
+
+            .reviews-title {
+                font-size: 1.6rem;
+            }
+
+            .review-text {
+                font-size: 1.1rem;
+            }
+
+            .review-author {
+                font-size: 1rem;
+            }
+
+            .review-duration {
+                font-size: 0.85rem;
+            }
+
+            .review-item {
+                margin-bottom: 50px;
+            }
+
+            .contact-title {
+                font-size: 1.3rem;
+            }
+
+            .cube-logo {
+                width: 60px;
+                height: 60px;
+            }
+
+            .contact-item h3 {
+                font-size: 1rem;
+            }
+
+            .contact-item p {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <!-- Logo -->
+            <div class="logo-3d">
+                <img src="content/sad.png" alt="Лого" class="logo-image">
+            </div>
+
+            <!-- Hero Title -->
+            <h1 class="hero-title">
+                Ми допомагаємо нашим моделям перетворити профіль у пасивний дохід від 500$
+            </h1>
+
+            <!-- CTA Button -->
+            <a href="https://tinyurl.com/bdde3sps" class="cta-button">
+                Зв'язатись з менеджером
+            </a>
+
+            <!-- Guarantees -->
+            <div class="guarantees">
+                <div class="guarantee-item">
+                    <span>❌ Не Onlik</span>
+                    <span>|</span>
+                    <span>🍑 Без Інтиму</span>
+                    <span>|</span>
+                    <span>😇 Без вкладень</span>
+                </div>
+            </div>
+
+            <!-- Before/After Comparison -->
+            <div class="comparison-section">
+                <div class="comparison-cards">
+                    <div class="comparison-card">
+                        <div class="comparison-label before-label">ДО</div>
+                        <img src="content/profile.jpg" alt="До" class="comparison-image">
+                        <div class="profile-info">
+                            <h3>TETIANA, 19</h3>
+                            <p>Привіт, дівчат! 👋<br>
+                            Шукаю собі компанію на вихідні на<br>
+                            кавочку, прогулянки, шопінг, кіно,<br>
+                            ресторани тощо 😊</p>
+                        </div>
+                    </div>
+                    <div class="comparison-card">
+                        <div class="comparison-label after-label">ПІСЛЯ</div>
+                        <img src="content/team.png" alt="Після" class="comparison-image">
+                        <div class="profile-info">
+                            <h3>TETIANA, 19</h3>
+                            <p>Обожнюю кафе, музу та кіно 🎬 Шукаю спілкування<br>
+                            з цікавою компанією — давай випити кавочку! ☕ Дуже<br>
+                            люблю подорожувати ✈️ та відкривати нові місця.<br>
+                            Якщо хочеш більше знати про мене та мої пригоди,<br>
+                            чекаю на твої повідомлення! 💕</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile Creation Section -->
+    <section class="profile-creation">
+        <div class="container">
+            <h2 class="section-title">Створення привабливого профілю</h2>
+            <p class="section-subtitle">Професійне оформлення, якісний контент, унікальний стиль.</p>
+            
+            <div class="divider-line"></div>
+            
+            <!-- Experience Section -->
+            <div class="experience-section">
+                <div class="experience-badge">
+                    <div class="badge-icon">👤</div>
+                    <div class="badge-text">1000+</div>
+                </div>
+                <h3 class="experience-title">ТВОЯ КРАСА<br>+ НАШ ДОСВІД</h3>
+                <div class="experience-images">
+                    <img src="content/team.png" alt="Досвід" class="experience-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Account Management Section -->
+    <section class="account-management">
+        <div class="container">
+            <h2 class="section-title">Менеджмент акаунта</h2>
+            <p class="section-subtitle">Ведення сторінки, маркетинг, постійна активність та залучення фонів.</p>
+            
+            <div class="divider-line"></div>
+            
+            <!-- Gifts Section -->
+            <div class="gifts-section">
+                <div class="gifts-card">
+                    <h3 class="gifts-title">ПОДАРУНКИ<br>ДЛЯ НАШИХ<br>МОДЕЛЕЙ</h3>
+                    <div class="gifts-images">
+                        <img src="content/gifts.png" alt="Подарунки" class="gifts-image">
+                    </div>
+                </div>
+                
+                <!-- Monetization Section -->
+                <div class="monetization-section">
+                    <h3 class="monetization-title">Набір прихильників і монетизація</h3>
+                    <p class="monetization-subtitle">Партнерські програми, подарунки та додаткові джерела прибутку</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Залишилась запитання?</h2>
+            <a href="https://tinyurl.com/bdde3sps" class="cta-button-secondary">
+                Зв'язатись з менеджером
+            </a>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews-section">
+        <div class="container">
+            <h2 class="reviews-title">Відгуки Моделей</h2>
+            <div class="quote-divider">
+                <span class="quote-symbol">💬</span>
+            </div>
+            <div class="review-item">
+                <p class="review-text">
+                    <em>Ніколи не думала, що вести профіль може бути так легко. Агенція взяла на себе все і залишили мені лише приємний дохід</em>
+                </p>
+                <p class="review-author">- Анна, 21 рік</p>
+                <p class="review-duration">3 роки з нами</p>
+            </div>
+            
+            <div class="quote-divider">
+                <span class="quote-symbol">💬</span>
+            </div>
+            
+            <div class="review-item">
+                <p class="review-text">
+                    <em>До цього мій профіль виглядав пусто і не приверттав уваги. Агенція допомогла правильно його налаштувати, тепер отримую набагато більше уваги та подарунків від шанувальників</em>
+                </p>
+                <p class="review-author">- Євгенія, 54 роки</p>
+                <p class="review-duration">1 рік з нами</p>
+            </div>
+            
+            <div class="quote-divider">
+                <span class="quote-symbol">💬</span>
+            </div>
+            
+            <div class="review-item">
+                <p class="review-text">
+                    <em>Я боялася, що буде складно вести сторінку, відповідати, підтримувати інтерес. Але вони все взяли на себе, що дозволило мені зосередитися на собі</em>
+                </p>
+                <p class="review-author">- Марія, 28 років</p>
+                <p class="review-duration">2 роки з нами</p>
+            </div>
+            
+            <div class="quote-divider">
+                <span class="quote-symbol">💬</span>
+            </div>
+            
+            <div class="review-item">
+                <p class="review-text">
+                    <em>Я боялася, що буде складно вести сторінку, відповідати, підтримувати інтерес. Але вони все взяли на себе, що мені комфортно, а результат – більше знайомств і впевненість у собі</em>
+                </p>
+                <p class="review-author">- Дарина, 37 років</p>
+                <p class="review-duration">5 років з нами</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-logo">
+                <div class="logo-cube">
+                    <img src="content/sad.png" alt="Лого" class="cube-logo">
+                </div>
+            </div>
+            
+            <h2 class="contact-title">МИ ЗАВЖДИ НА ЗВ'ЯЗКУ</h2>
+            
+            <a href="https://tinyurl.com/bdde3sps" class="cta-button-contact">
+                Зв'язатись з менеджером
+            </a>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>Телефон:</h3>
+                    <p>+380509875643</p>
+                </div>
+                <div class="contact-item">
+                    <h3>Email:</h3>
+                    <p>manager@ancrush.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Button click handlers with Meta Pixel tracking
+        document.querySelectorAll('.cta-button, .cta-button-secondary, .cta-button-contact').forEach(button => {
+            button.addEventListener('click', function(e) {
+                // Track Meta Pixel event
+                if (typeof fbq !== 'undefined') {
+                    fbq('track', 'Lead', { content_name: 'models' });
+                }
+                
+                // Let the link navigate naturally to the target URL
+                console.log('Button clicked - navigating to target URL');
+            });
+        });
+
+        // Add floating animation to logo
+        const logo = document.querySelector('.logo-3d');
+        if (logo) {
+            logo.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.05)';
+            });
+            
+            logo.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+            });
+        }
+    </script>
+</body>
+</html>
