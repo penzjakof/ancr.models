@@ -1,883 +1,461 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="uk-UA">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ми допомагаємо нашим моделям перетворити профіль у пасивний дохід від 500$">
+    <meta property="og:description" content="Ми допомагаємо нашим моделям перетворити профіль у пасивний дохід від 500$">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <title>Модельний агентство - Пасивний дохід від 500$</title>
-    
-    <!-- Meta Pixel Code -->
+
+    <meta property="name" content="Модельний агентство - Пасивний дохід від 500$">
+    <meta property="og:title" content="Модельний агентство - Пасивний дохід від 500$">
+    <meta property="og:type" content="website">
+
+    <!-- Facebook Pixel Code -->
     <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '762125686349445');
-    fbq('track', 'PageView');
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '762125686349445');
+        fbq('track', 'PageView');
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=762125686349445&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=762125686349445&ev=PageView&noscript=1"/></noscript>
+    <!-- End Facebook Pixel Code -->
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap">
     
     <style>
+        :root {
+            --page-background-color: #111d27;
+            --content-background-color: rgba(255, 255, 255, 0);
+            --text-color: #ffffff;
+            --primary-color: #ffffff;
+            --secondary-color: #5c2c97;
+            --p-font-family: Comfortaa, cursive;
+            --p-font-size: 18px;
+            --p-font-weight: normal;
+            --p-font-style: normal;
+            --p-line-height: 140%;
+            --h1-font-family: Comfortaa, cursive;
+            --h1-font-size: 48px;
+            --h1-font-weight: bold;
+            --h2-font-family: Comfortaa, cursive;
+            --h2-font-size: 36px;
+            --h2-font-weight: bold;
+            --h3-font-family: Comfortaa, cursive;
+            --h3-font-size: 22px;
+            --h3-font-weight: bold;
+            --secondary-button-border-radius: 50px;
+            --secondary-button-color: #ffffff;
+            --secondary-button-background: #5c2c97;
+            --secondary-button-font-size: 16px;
+            --secondary-button-font-weight: bold;
+            --secondary-button-font-family: Comfortaa, cursive;
+        }
+
         * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
         }
 
         body {
-            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: #fff;
-            overflow-x: hidden;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: var(--p-font-family);
+            font-size: var(--p-font-size);
+            color: var(--text-color);
+            background: var(--page-background-color);
+            position: relative;
             min-height: 100vh;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('background.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top center;
+            z-index: -1;
         }
 
         .container {
-            max-width: 600px;
+            max-width: 480px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
         }
 
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+        .logo-section {
             text-align: center;
-            padding: 40px 0;
+            padding: 50px 0 20px 0;
         }
 
-        .logo-3d {
-            width: 200px;
-            height: 200px;
-            margin-bottom: 40px;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .logo-section img {
+            max-width: 100%;
+            height: auto;
         }
 
-        .logo-3d::before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, #ff6b9d, #c471ed, #12c2e9);
-            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-            filter: blur(20px);
-            opacity: 0.7;
-            animation: float 3s ease-in-out infinite;
+        .hero-section {
+            background: rgba(255, 255, 255, 0);
+            padding: 20px 40px;
+            border-radius: 15px;
+            margin: 20px 0;
+            text-align: center;
         }
 
-        .logo-image {
-            width: 150px;
-            height: 150px;
-            position: relative;
-            z-index: 2;
-            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
+        .hero-section h1 {
+            font-family: var(--h1-font-family);
+            font-size: var(--h1-font-size);
+            font-weight: var(--h1-font-weight);
+            line-height: 120%;
+            margin-bottom: 20px;
         }
 
-        .hero-title {
-            font-size: 1.8rem;
-            font-weight: 600;
-            margin-bottom: 30px;
-            line-height: 1.3;
-            max-width: 400px;
-        }
-
-        .cta-button {
+        .btn-primary {
             display: inline-flex;
             align-items: center;
-            gap: 10px;
-            padding: 18px 40px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            padding: 10px 16px;
+            background: var(--secondary-button-background);
+            color: var(--secondary-button-color);
             text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            margin-bottom: 30px;
-            border: 2px solid rgba(255,255,255,0.2);
-            backdrop-filter: blur(10px);
+            border-radius: var(--secondary-button-border-radius);
+            font-weight: var(--secondary-button-font-weight);
+            font-size: var(--secondary-button-font-size);
+            font-family: var(--secondary-button-font-family);
+            margin: 20px 0;
+            transition: opacity 0.3s ease;
         }
 
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        .btn-primary:hover {
+            opacity: 0.8;
         }
 
-        .cta-button::before {
-            content: '🔗';
-            font-size: 1.2rem;
+        .btn-primary .icon {
+            margin-right: 16px;
+        }
+
+        .btn-primary svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
         }
 
         .guarantees {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            font-size: 1rem;
-            opacity: 0.9;
+            background: rgba(255, 255, 255, 0);
+            padding: 30px;
+            margin: 20px 0;
+            text-align: center;
         }
 
-        .guarantee-item {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
+        .guarantees p {
+            font-size: 16px;
+            font-weight: bold;
         }
 
-        /* Comparison Section */
-        .comparison-section {
-            margin-top: 40px;
-        }
-
-        .comparison-cards {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .comparison-card {
-            flex: 1;
-            background: white;
-            border-radius: 15px;
-            padding: 0;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            position: relative;
-        }
-
-        .comparison-label {
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            padding: 8px 16px;
+        .content-section {
+            background: #ffffff;
+            margin: 20px 0;
             border-radius: 20px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            z-index: 2;
-        }
-
-        .before-label {
-            background: #ff4757;
-            color: white;
-        }
-
-        .after-label {
-            background: #2ed573;
-            color: white;
-        }
-
-        .comparison-image {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-        }
-
-        .profile-info {
-            padding: 15px;
-            color: #333;
-        }
-
-        .profile-info h3 {
-            margin: 0 0 10px 0;
-            font-size: 1rem;
-            font-weight: 600;
-        }
-
-        .profile-info p {
-            margin: 0;
-            font-size: 0.85rem;
-            line-height: 1.4;
-            color: #666;
-        }
-
-        /* Profile Creation Section */
-        .profile-creation {
-            background: white;
-            padding: 60px 0;
-            margin-top: 0;
-        }
-
-        .section-title {
-            font-size: 1.8rem;
-            font-weight: 600;
-            text-align: center;
-            color: #333;
-            margin-bottom: 15px;
-        }
-
-        .section-subtitle {
-            font-size: 1.1rem;
-            text-align: center;
-            color: #666;
-            margin-bottom: 40px;
-        }
-
-        .divider-line {
-            width: 60px;
-            height: 2px;
-            background: #ddd;
-            margin: 0 auto 50px auto;
-        }
-
-        /* Experience Section */
-        .experience-section {
-            text-align: center;
-            position: relative;
-        }
-
-        .experience-badge {
-            display: inline-flex;
-            align-items: center;
-            background: #ff4757;
-            color: white;
-            padding: 15px 25px;
-            border-radius: 25px;
-            margin-bottom: 20px;
-            box-shadow: 0 10px 30px rgba(255,71,87,0.3);
-        }
-
-        .badge-icon {
-            font-size: 1.5rem;
-            margin-right: 10px;
-        }
-
-        .badge-text {
-            font-size: 1.8rem;
-            font-weight: 700;
-        }
-
-        .experience-title {
-            font-size: 1.6rem;
-            font-weight: 700;
-            color: #333;
-            margin-bottom: 30px;
-            line-height: 1.2;
-        }
-
-        .experience-images {
-            margin-top: 30px;
-        }
-
-        .experience-image {
-            width: 100%;
-            max-width: 400px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 15px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-        }
-
-        /* Account Management Section */
-        .account-management {
-            background: white;
-            padding: 60px 0;
-            margin-top: 0;
-        }
-
-        /* Gifts Section */
-        .gifts-section {
-            text-align: center;
-        }
-
-        .gifts-card {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 20px;
-            padding: 40px 20px;
-            color: white;
-            position: relative;
             overflow: hidden;
-            max-width: 500px;
-            margin: 0 auto;
         }
 
-        .gifts-title {
-            font-size: 1.8rem;
-            font-weight: 700;
-            line-height: 1.1;
-            margin-bottom: 30px;
-            text-align: left;
-            padding-left: 20px;
+        .content-section.top-rounded {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
         }
 
-        .gifts-images {
-            text-align: center;
+        .content-section.bottom-rounded {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
         }
 
-        .gifts-image {
+        .content-section.no-rounded {
+            border-radius: 0;
+        }
+
+        .content-section img {
             width: 100%;
-            max-width: 300px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 15px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+            height: auto;
+            display: block;
+            border-radius: 20px;
         }
 
-        /* Monetization Section */
-        .monetization-section {
-            margin-top: 40px;
-            text-align: center;
-            padding: 0 20px;
-        }
-
-        .monetization-title {
-            font-size: 1.6rem;
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 15px;
-            line-height: 1.3;
-        }
-
-        .monetization-subtitle {
-            font-size: 1.1rem;
-            color: #666;
-            line-height: 1.4;
-            max-width: 500px;
-            margin: 0 auto;
-        }
-
-        /* CTA Section */
-        .cta-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 60px 0;
+        .content-section .text-content {
+            padding: 30px;
             text-align: center;
         }
 
-        .cta-title {
-            font-size: 1.8rem;
-            font-weight: 600;
-            color: white;
-            margin-bottom: 30px;
-        }
-
-        .cta-button-secondary {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 18px 40px;
-            background: rgba(255,255,255,0.2);
-            color: white;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            border: 2px solid rgba(255,255,255,0.3);
-            backdrop-filter: blur(10px);
-        }
-
-        .cta-button-secondary:hover {
-            background: rgba(255,255,255,0.3);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        .cta-button-secondary::before {
-            content: '🔗';
-            font-size: 1.2rem;
-        }
-
-        /* Reviews Section */
-        .reviews-section {
-            background: #2c3e50;
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        .reviews-title {
-            font-size: 2rem;
-            font-weight: 600;
-            color: white;
-            margin-bottom: 40px;
-        }
-
-        .quote-divider {
-            margin-bottom: 40px;
-        }
-
-        .quote-symbol {
-            font-size: 2rem;
-            color: #f39c12;
-        }
-
-        .review-text {
-            font-size: 1.3rem;
-            color: white;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
-
-        .review-author {
-            font-size: 1.1rem;
-            color: #bdc3c7;
-            font-weight: 500;
+        .content-section h3 {
+            color: #111d27;
+            font-family: var(--h3-font-family);
+            font-size: var(--h3-font-size);
+            font-weight: var(--h3-font-weight);
             margin-bottom: 10px;
         }
 
-        .review-duration {
-            font-size: 0.9rem;
-            color: #95a5a6;
-            font-style: italic;
+        .content-section p {
+            color: #111d27;
+            font-size: var(--p-font-size);
+            line-height: var(--p-line-height);
         }
 
-        .review-item {
-            max-width: 600px;
-            margin: 0 auto 60px auto;
+        .divider {
+            background: #ffffff;
+            padding: 30px;
+            margin: 0;
         }
 
-        .review-item:last-child {
-            margin-bottom: 0;
+        .divider-line {
+            width: 100%;
+            border-top: 1px solid #5c2c97;
         }
 
-        /* Contact Section */
-        .contact-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 80px 0;
+        .cta-section {
+            background: rgba(255, 255, 255, 0);
+            padding: 0;
             text-align: center;
-            color: white;
+            margin: 60px 0;
         }
 
-        .contact-logo {
-            margin-bottom: 40px;
-        }
-
-        .logo-cube {
-            display: inline-block;
-            position: relative;
+        .cta-section h1 {
+            color: #000000;
+            font-size: 20px;
             margin-bottom: 20px;
         }
 
-        .cube-logo {
-            width: 80px;
-            height: 80px;
-            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
-            border-radius: 15px;
+        .reviews-section {
+            background: var(--page-background-color);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            margin: 20px 0;
         }
 
-        .contact-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 40px;
-            color: rgba(255,255,255,0.9);
+        .reviews-section h2 {
+            font-family: var(--h2-font-family);
+            font-size: var(--h2-font-size);
+            font-weight: var(--h2-font-weight);
+            margin-bottom: 30px;
         }
 
-        .cta-button-contact {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 18px 40px;
-            background: rgba(255,255,255,0.2);
-            color: white;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            margin-bottom: 50px;
-            border: 2px solid rgba(255,255,255,0.3);
-            backdrop-filter: blur(10px);
+        .review-item {
+            margin: 30px 0;
         }
 
-        .cta-button-contact:hover {
-            background: rgba(255,255,255,0.3);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        .review-item p {
+            margin: 10px 0;
         }
 
-        .cta-button-contact::before {
-            content: '🔗';
-            font-size: 1.2rem;
+        .review-item em {
+            font-style: italic;
+        }
+
+        .review-divider {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .contact-section {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .contact-section p {
+            margin: 10px 0;
+            color: #843fa1;
+            font-weight: bold;
+            font-size: 14px;
+            text-transform: uppercase;
         }
 
         .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-            max-width: 400px;
-            margin: 0 auto;
+            background: rgba(255, 255, 255, 0);
+            padding: 0 40px;
+            border-radius: 6px;
+            text-align: center;
         }
 
-        .contact-item h3 {
-            font-size: 1.1rem;
-            margin-bottom: 8px;
-            color: rgba(255,255,255,0.8);
-            font-weight: 500;
+        .contact-info p {
+            margin: 10px 0;
+            color: var(--text-color);
+            font-size: var(--p-font-size);
+            text-transform: none;
+            font-weight: normal;
         }
 
-        .contact-item p {
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin: 0;
-            color: white;
-        }
-
-        /* Animations */
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-10px) rotate(2deg); }
-        }
-
-
-
-
-
-        /* Responsive Design */
         @media (max-width: 768px) {
-            .hero-title {
-                font-size: 1.5rem;
-            }
-
-            .logo-3d {
-                width: 160px;
-                height: 160px;
-            }
-
-            .logo-image {
-                width: 120px;
-                height: 120px;
-            }
-
             .container {
-                padding: 0 15px;
+                padding: 15px;
             }
-
-            .guarantees {
-                font-size: 0.9rem;
+            
+            .hero-section h1 {
+                font-size: 24px;
             }
-
-            .comparison-cards {
-                flex-direction: column;
-                gap: 20px;
-            }
-
-            .comparison-image {
-                height: 150px;
-            }
-
-            .profile-info p {
-                font-size: 0.8rem;
-            }
-
-            .section-title {
-                font-size: 1.5rem;
-            }
-
-            .section-subtitle {
-                font-size: 1rem;
-            }
-
-            .experience-title {
-                font-size: 1.3rem;
-            }
-
-            .badge-text {
-                font-size: 1.5rem;
-            }
-
-            .experience-image {
-                height: 150px;
-            }
-
-            .gifts-title {
-                font-size: 1.4rem;
-                padding-left: 10px;
-            }
-
-            .gifts-image {
-                height: 150px;
-            }
-
-            .gifts-card {
-                padding: 30px 15px;
-            }
-
-            .monetization-title {
-                font-size: 1.3rem;
-            }
-
-            .monetization-subtitle {
-                font-size: 1rem;
-            }
-
-            .cta-title {
-                font-size: 1.5rem;
-            }
-
-            .reviews-title {
-                font-size: 1.6rem;
-            }
-
-            .review-text {
-                font-size: 1.1rem;
-            }
-
-            .review-author {
-                font-size: 1rem;
-            }
-
-            .review-duration {
-                font-size: 0.85rem;
-            }
-
-            .review-item {
-                margin-bottom: 50px;
-            }
-
-            .contact-title {
-                font-size: 1.3rem;
-            }
-
-            .cube-logo {
-                width: 60px;
-                height: 60px;
-            }
-
-            .contact-item h3 {
-                font-size: 1rem;
-            }
-
-            .contact-item p {
-                font-size: 1.1rem;
+            
+            .content-section .text-content {
+                padding: 20px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <!-- Logo -->
-            <div class="logo-3d">
-                <img src="logo.png" alt="Лого" class="logo-image">
-            </div>
+    <div class="container">
+        <!-- Logo Section -->
+        <div class="logo-section">
+            <img src="logo.png" alt="лого">
+        </div>
 
-            <!-- Hero Title -->
-            <h1 class="hero-title">
-                Ми допомагаємо нашим моделям перетворити профіль у пасивний дохід від 500$
-            </h1>
-
-            <!-- CTA Button -->
-            <a href="https://tinyurl.com/bdde3sps" class="cta-button">
-                Зв'язатись з менеджером
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <p>Ми допомагаємо нашим моделям перетворити профіль у пасивний дохід від 500$</p>
+            
+            <a href="https://tinyurl.com/bdde3sps" class="btn-primary" target="_blank">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M19.9729 4.10811C24.4509 -0.369875 31.7112 -0.369875 36.1892 4.10811C40.6672 8.5861 40.6672 15.8463 36.1892 20.3243L30.7838 25.7297C26.3058 30.2077 19.0455 30.2077 14.5675 25.7297L13.8919 25.0541C13.1455 24.3077 13.1455 23.0977 13.8919 22.3514C14.6382 21.605 15.8482 21.605 16.5946 22.3514L17.2702 23.027C20.2556 26.0124 25.0957 26.0124 28.0811 23.027L33.4865 17.6216C36.4718 14.6363 36.4718 9.79614 33.4865 6.81081C30.5011 3.82549 25.661 3.82549 22.6756 6.81081L19.2973 10.1892C18.5509 10.9355 17.3409 10.9355 16.5946 10.1892C15.8482 9.44286 15.8482 8.23282 16.5946 7.48649L19.9729 4.10811Z" fill="currentColor"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M24.0275 18.9729C21.0422 15.9876 16.202 15.9876 13.2167 18.9729L7.81126 24.3783C4.82593 27.3637 4.82593 32.2038 7.81126 35.1891C10.7966 38.1745 15.6367 38.1745 18.6221 35.1891L22.0004 31.8108C22.7468 31.0644 23.9568 31.0644 24.7032 31.8108C25.4495 32.5571 25.4495 33.7671 24.7032 34.5135L21.3248 37.8918C16.8468 42.3698 9.58654 42.3698 5.10855 37.8918C0.630567 33.4139 0.630567 26.1536 5.10855 21.6756L10.514 16.2702C14.9919 11.7922 22.2522 11.7922 26.7302 16.2702L27.4059 16.9459C28.1522 17.6922 28.1522 18.9023 27.4059 19.6486C26.6595 20.3949 25.4495 20.3949 24.7032 19.6486L24.0275 18.9729Z" fill="currentColor"></path>
+                    </svg>
+                </div>
+                Звʼязатись з менеджером
             </a>
+        </div>
 
-            <!-- Guarantees -->
-            <div class="guarantees">
-                <div class="guarantee-item">
-                    <span>❌ Не Onlik</span>
-                    <span>|</span>
-                    <span>🍑 Без Інтиму</span>
-                    <span>|</span>
-                    <span>😇 Без вкладень</span>
-                </div>
-            </div>
+        <!-- Guarantees Section -->
+        <div class="guarantees">
+            <p><strong>❌ Не Онлік | 🚫 Без Інтиму | 💸 Без вкладень</strong></p>
+        </div>
 
-            <!-- Before/After Comparison -->
-            <div class="comparison-section">
-                <div class="comparison-cards">
-                    <div class="comparison-card">
-                        <div class="comparison-label before-label">ДО</div>
-                        <img src="profile.jpg" alt="До" class="comparison-image">
-                        <div class="profile-info">
-                            <h3>TETIANA, 19</h3>
-                            <p>Привіт, дівчат! 👋<br>
-                            Шукаю собі компанію на вихідні на<br>
-                            кавочку, прогулянки, шопінг, кіно,<br>
-                            ресторани тощо 😊</p>
-                        </div>
-                    </div>
-                    <div class="comparison-card">
-                        <div class="comparison-label after-label">ПІСЛЯ</div>
-                        <img src="team.png" alt="Після" class="comparison-image">
-                        <div class="profile-info">
-                            <h3>TETIANA, 19</h3>
-                            <p>Обожнюю кафе, музу та кіно 🎬 Шукаю спілкування<br>
-                            з цікавою компанією — давай випити кавочку! ☕ Дуже<br>
-                            люблю подорожувати ✈️ та відкривати нові місця.<br>
-                            Якщо хочеш більше знати про мене та мої пригоди,<br>
-                            чекаю на твої повідомлення! 💕</p>
-                        </div>
-                    </div>
-                </div>
+        <!-- Profile Creation Section -->
+        <div class="content-section top-rounded">
+            <img src="profile.jpg" alt="проф">
+        </div>
+        <div class="content-section no-rounded">
+            <div class="text-content">
+                <h3>Створення привабливого профілю</h3>
+                <p>Професійне оформлення, якісний контент, унікальний стиль.</p>
             </div>
         </div>
-    </section>
-
-    <!-- Profile Creation Section -->
-    <section class="profile-creation">
-        <div class="container">
-            <h2 class="section-title">Створення привабливого профілю</h2>
-            <p class="section-subtitle">Професійне оформлення, якісний контент, унікальний стиль.</p>
-            
+        <div class="divider">
             <div class="divider-line"></div>
-            
-            <!-- Experience Section -->
-            <div class="experience-section">
-                <div class="experience-badge">
-                    <div class="badge-icon">👤</div>
-                    <div class="badge-text">1000+</div>
-                </div>
-                <h3 class="experience-title">ТВОЯ КРАСА<br>+ НАШ ДОСВІД</h3>
-                <div class="experience-images">
-                    <img src="team.png" alt="Досвід" class="experience-image">
-                </div>
+        </div>
+        <div class="content-section no-rounded">
+            <img src="team.png" alt="команда">
+        </div>
+        <div class="content-section no-rounded">
+            <div class="text-content">
+                <h3>Менеджмент акаунта</h3>
+                <p>Ведення сторінки, таргетинг, постійна активність та залучення фанів.</p>
             </div>
         </div>
-    </section>
-
-    <!-- Account Management Section -->
-    <section class="account-management">
-        <div class="container">
-            <h2 class="section-title">Менеджмент акаунта</h2>
-            <p class="section-subtitle">Ведення сторінки, маркетинг, постійна активність та залучення фонів.</p>
-            
+        <div class="divider">
             <div class="divider-line"></div>
-            
-            <!-- Gifts Section -->
-            <div class="gifts-section">
-                <div class="gifts-card">
-                    <h3 class="gifts-title">ПОДАРУНКИ<br>ДЛЯ НАШИХ<br>МОДЕЛЕЙ</h3>
-                    <div class="gifts-images">
-                        <img src="gifts.png" alt="Подарунки" class="gifts-image">
-                    </div>
+        </div>
+        <div class="content-section no-rounded">
+            <img src="gifts.png" alt="подарунки">
+        </div>
+        <div class="content-section bottom-rounded">
+            <div class="text-content">
+                <h3>Набір прихильників і монетизація</h3>
+                <p>Партнерські програми, подарунки та додаткові джерела прибутку</p>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="cta-section">
+            <h1>Залишились запитання?</h1>
+            <a href="https://tinyurl.com/bdde3sps" class="btn-primary" target="_blank">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M19.9729 4.10811C24.4509 -0.369875 31.7112 -0.369875 36.1892 4.10811C40.6672 8.5861 40.6672 15.8463 36.1892 20.3243L30.7838 25.7297C26.3058 30.2077 19.0455 30.2077 14.5675 25.7297L13.8919 25.0541C13.1455 24.3077 13.1455 23.0977 13.8919 22.3514C14.6382 21.605 15.8482 21.605 16.5946 22.3514L17.2702 23.027C20.2556 26.0124 25.0957 26.0124 28.0811 23.027L33.4865 17.6216C36.4718 14.6363 36.4718 9.79614 33.4865 6.81081C30.5011 3.82549 25.661 3.82549 22.6756 6.81081L19.2973 10.1892C18.5509 10.9355 17.3409 10.9355 16.5946 10.1892C15.8482 9.44286 15.8482 8.23282 16.5946 7.48649L19.9729 4.10811Z" fill="currentColor"></path>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M24.0275 18.9729C21.0422 15.9876 16.202 15.9876 13.2167 18.9729L7.81126 24.3783C4.82593 27.3637 4.82593 32.2038 7.81126 35.1891C10.7966 38.1745 15.6367 38.1745 18.6221 35.1891L22.0004 31.8108C22.7468 31.0644 23.9568 31.0644 24.7032 31.8108C25.4495 32.5571 25.4495 33.7671 24.7032 34.5135L21.3248 37.8918C16.8468 42.3698 9.58654 42.3698 5.10855 37.8918C0.630567 33.4139 0.630567 26.1536 5.10855 21.6756L10.514 16.2702C14.9919 11.7922 22.2522 11.7922 26.7302 16.2702L27.4059 16.9459C28.1522 17.6922 28.1522 18.9023 27.4059 19.6486C26.6595 20.3949 25.4495 20.3949 24.7032 19.6486L24.0275 18.9729Z" fill="currentColor"></path>
+                    </svg>
                 </div>
+                Звʼязатись з менеджером
+            </a>
+        </div>
+
+        <!-- Reviews Section -->
+        <div class="reviews-section">
+            <h2>Відгуки Моделей</h2>
+            
+            <div class="review-divider">
+                <img src="divider.png" alt="divider">
+            </div>
+            
+            <div class="review-item">
+                <p><em>Ніколи не думала, що вести профіль може бути так легко. Агенція взяла на себе все і залишили мені лише приємний дохід</em></p>
+                <p>- Анна, 21 рік<br><span style="font-size: 12px;">3 роки з нами</span></p>
+            </div>
+            
+            <div class="review-divider">
+                <img src="divider.png" alt="divider">
+            </div>
+            
+            <div class="review-item">
+                <p><em>До цього мій профіль виглядав пусто і не привертав уваги. Агенція допомогла правильно його налаштувати, тепер отримую набагато більше уваги та подарунків від шанувальників</em></p>
+                <p>- Євгенія, 54 роки<br><span style="font-size: 12px;">1 рік з нами</span></p>
+            </div>
+            
+            <div class="review-divider">
+                <img src="divider.png" alt="divider">
+            </div>
+            
+            <div class="review-item">
+                <p><em>Я боялася, що буде складно вести сторінку, відповідати, підтримувати інтерес. Але вони все взяли на себе, що мені комфортно, а результат – більше знайомств і впевненість у собі</em></p>
+                <p>- Дарина, 37 років<br><span style="font-size: 12px;">5 років з нами</span></p>
+            </div>
+
+            <!-- Contact Section -->
+            <div class="review-divider">
+                <img src="logo.png" alt="лого" style="max-width: 100px;">
+            </div>
+            
+            <div class="contact-section">
+                <p>Ми завжди на зв'язку</p>
                 
-                <!-- Monetization Section -->
-                <div class="monetization-section">
-                    <h3 class="monetization-title">Набір прихильників і монетизація</h3>
-                    <p class="monetization-subtitle">Партнерські програми, подарунки та додаткові джерела прибутку</p>
-                </div>
+                <a href="https://tinyurl.com/bdde3sps" class="btn-primary" target="_blank">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M19.9729 4.10811C24.4509 -0.369875 31.7112 -0.369875 36.1892 4.10811C40.6672 8.5861 40.6672 15.8463 36.1892 20.3243L30.7838 25.7297C26.3058 30.2077 19.0455 30.2077 14.5675 25.7297L13.8919 25.0541C13.1455 24.3077 13.1455 23.0977 13.8919 22.3514C14.6382 21.605 15.8482 21.605 16.5946 22.3514L17.2702 23.027C20.2556 26.0124 25.0957 26.0124 28.0811 23.027L33.4865 17.6216C36.4718 14.6363 36.4718 9.79614 33.4865 6.81081C30.5011 3.82549 25.661 3.82549 22.6756 6.81081L19.2973 10.1892C18.5509 10.9355 17.3409 10.9355 16.5946 10.1892C15.8482 9.44286 15.8482 8.23282 16.5946 7.48649L19.9729 4.10811Z" fill="currentColor"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M24.0275 18.9729C21.0422 15.9876 16.202 15.9876 13.2167 18.9729L7.81126 24.3783C4.82593 27.3637 4.82593 32.2038 7.81126 35.1891C10.7966 38.1745 15.6367 38.1745 18.6221 35.1891L22.0004 31.8108C22.7468 31.0644 23.9568 31.0644 24.7032 31.8108C25.4495 32.5571 25.4495 33.7671 24.7032 34.5135L21.3248 37.8918C16.8468 42.3698 9.58654 42.3698 5.10855 37.8918C0.630567 33.4139 0.630567 26.1536 5.10855 21.6756L10.514 16.2702C14.9919 11.7922 22.2522 11.7922 26.7302 16.2702L27.4059 16.9459C28.1522 17.6922 28.1522 18.9023 27.4059 19.6486C26.6595 20.3949 25.4495 20.3949 24.7032 19.6486L24.0275 18.9729Z" fill="currentColor"></path>
+                        </svg>
+                    </div>
+                    Звʼязатись з менеджером
+                </a>
             </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <h2 class="cta-title">Залишилась запитання?</h2>
-            <a href="https://tinyurl.com/bdde3sps" class="cta-button-secondary">
-                Зв'язатись з менеджером
-            </a>
-        </div>
-    </section>
-
-    <!-- Reviews Section -->
-    <section class="reviews-section">
-        <div class="container">
-            <h2 class="reviews-title">Відгуки Моделей</h2>
-            <div class="quote-divider">
-                <span class="quote-symbol">💬</span>
-            </div>
-            <div class="review-item">
-                <p class="review-text">
-                    <em>Ніколи не думала, що вести профіль може бути так легко. Агенція взяла на себе все і залишили мені лише приємний дохід</em>
-                </p>
-                <p class="review-author">- Анна, 21 рік</p>
-                <p class="review-duration">3 роки з нами</p>
-            </div>
-            
-            <div class="quote-divider">
-                <span class="quote-symbol">💬</span>
-            </div>
-            
-            <div class="review-item">
-                <p class="review-text">
-                    <em>До цього мій профіль виглядав пусто і не приверттав уваги. Агенція допомогла правильно його налаштувати, тепер отримую набагато більше уваги та подарунків від шанувальників</em>
-                </p>
-                <p class="review-author">- Євгенія, 54 роки</p>
-                <p class="review-duration">1 рік з нами</p>
-            </div>
-            
-            <div class="quote-divider">
-                <span class="quote-symbol">💬</span>
-            </div>
-            
-            <div class="review-item">
-                <p class="review-text">
-                    <em>Я боялася, що буде складно вести сторінку, відповідати, підтримувати інтерес. Але вони все взяли на себе, що дозволило мені зосередитися на собі</em>
-                </p>
-                <p class="review-author">- Марія, 28 років</p>
-                <p class="review-duration">2 роки з нами</p>
-            </div>
-            
-            <div class="quote-divider">
-                <span class="quote-symbol">💬</span>
-            </div>
-            
-            <div class="review-item">
-                <p class="review-text">
-                    <em>Я боялася, що буде складно вести сторінку, відповідати, підтримувати інтерес. Але вони все взяли на себе, що мені комфортно, а результат – більше знайомств і впевненість у собі</em>
-                </p>
-                <p class="review-author">- Дарина, 37 років</p>
-                <p class="review-duration">5 років з нами</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact-section">
-        <div class="container">
-            <div class="contact-logo">
-                <div class="logo-cube">
-                    <img src="logo.png" alt="Лого" class="cube-logo">
-                </div>
-            </div>
-            
-            <h2 class="contact-title">МИ ЗАВЖДИ НА ЗВ'ЯЗКУ</h2>
-            
-            <a href="https://tinyurl.com/bdde3sps" class="cta-button-contact">
-                Зв'язатись з менеджером
-            </a>
             
             <div class="contact-info">
-                <div class="contact-item">
-                    <h3>Телефон:</h3>
-                    <p>+380509875643</p>
-                </div>
-                <div class="contact-item">
-                    <h3>Email:</h3>
-                    <p>manager@ancrush.com</p>
-                </div>
+                <p>Телефон:<br>+380509875643</p>
+                <p>Email:<br>manager@ancrush.com</p>
             </div>
         </div>
-    </section>
+    </div>
 
     <script>
-        // Button click handlers with Meta Pixel tracking
-        document.querySelectorAll('.cta-button, .cta-button-secondary, .cta-button-contact').forEach(button => {
-            button.addEventListener('click', function(e) {
-                // Track Meta Pixel event
-                if (typeof fbq !== 'undefined') {
-                    fbq('track', 'Lead', { content_name: 'models' });
-                }
-                
-                // Let the link navigate naturally to the target URL
-                console.log('Button clicked - navigating to target URL');
+        // Meta Pixel tracking for buttons
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('a[href="https://tinyurl.com/bdde3sps"]');
+            
+            buttons.forEach(function(button) {
+                button.addEventListener('click', function() {
+                    if (typeof fbq !== 'undefined') {
+                        fbq('track', 'Lead', { content_name: 'models' });
+                    }
+                });
             });
         });
-
-        // Add floating animation to logo
-        const logo = document.querySelector('.logo-3d');
-        if (logo) {
-            logo.addEventListener('mouseenter', function() {
-                this.style.transform = 'scale(1.05)';
-            });
-            
-            logo.addEventListener('mouseleave', function() {
-                this.style.transform = 'scale(1)';
-            });
-        }
     </script>
 </body>
 </html>
