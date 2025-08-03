@@ -295,29 +295,7 @@
             background: var(--secondary-color);
         }
         
-        .quiz-next-btn {
-            background: var(--secondary-color);
-            color: white;
-            border: none;
-            border-radius: 50px;
-            padding: 15px 30px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            opacity: 0.5;
-            pointer-events: none;
-        }
-        
-        .quiz-next-btn.enabled {
-            opacity: 1;
-            pointer-events: auto;
-        }
-        
-        .quiz-next-btn:hover.enabled {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
+
         
         .quiz-close {
             position: absolute;
@@ -815,10 +793,9 @@
                 </div>
                 <div class="quiz-question-text">Ви раніше співпрацювали з агенціями?</div>
                 <div class="quiz-options">
-                    <div class="quiz-option" onclick="selectOption(this, 'agencies_yes')">Так</div>
-                    <div class="quiz-option" onclick="selectOption(this, 'agencies_no')">Ні</div>
+                    <div class="quiz-option" onclick="selectOption(this, 'agencies_yes', 1)">Так</div>
+                    <div class="quiz-option" onclick="selectOption(this, 'agencies_no', 1)">Ні</div>
                 </div>
-                <button class="quiz-next-btn" onclick="nextQuestion(1)">Далі</button>
             </div>
             
             <!-- Question 2 -->
@@ -831,11 +808,10 @@
                 </div>
                 <div class="quiz-question-text">Скільки фото ви готові робити на місяць?</div>
                 <div class="quiz-options">
-                    <div class="quiz-option" onclick="selectOption(this, 'photos_10_20')">10-20</div>
-                    <div class="quiz-option" onclick="selectOption(this, 'photos_20_50')">20-50</div>
-                    <div class="quiz-option" onclick="selectOption(this, 'photos_50_plus')">50+</div>
+                    <div class="quiz-option" onclick="selectOption(this, 'photos_10_20', 2)">10-20</div>
+                    <div class="quiz-option" onclick="selectOption(this, 'photos_20_50', 2)">20-50</div>
+                    <div class="quiz-option" onclick="selectOption(this, 'photos_50_plus', 2)">50+</div>
                 </div>
-                <button class="quiz-next-btn" onclick="nextQuestion(2)">Далі</button>
             </div>
             
             <!-- Question 3 -->
@@ -848,10 +824,9 @@
                 </div>
                 <div class="quiz-question-text">Ви готові записувати короткі лайфстайл відео?</div>
                 <div class="quiz-options">
-                    <div class="quiz-option" onclick="selectOption(this, 'videos_yes')">Так</div>
-                    <div class="quiz-option" onclick="selectOption(this, 'videos_no')">Ні</div>
+                    <div class="quiz-option" onclick="selectOption(this, 'videos_yes', 3)">Так</div>
+                    <div class="quiz-option" onclick="selectOption(this, 'videos_no', 3)">Ні</div>
                 </div>
-                <button class="quiz-next-btn" onclick="showResults()">Завершити</button>
             </div>
             
             <!-- Results Screen -->
@@ -893,13 +868,11 @@
             // Reset all questions to initial state
             document.querySelectorAll('.quiz-question').forEach(q => q.classList.remove('active'));
             document.getElementById('question1').classList.add('active');
-            // Reset all buttons
-            document.querySelectorAll('.quiz-next-btn').forEach(btn => btn.classList.remove('enabled'));
             // Reset all selections
             document.querySelectorAll('.quiz-option').forEach(opt => opt.classList.remove('selected'));
         }
 
-        function selectOption(element, value) {
+        function selectOption(element, value, questionNum) {
             // Remove selected class from all options in current question
             const options = element.parentNode.querySelectorAll('.quiz-option');
             options.forEach(option => option.classList.remove('selected'));
@@ -908,11 +881,17 @@
             element.classList.add('selected');
             
             // Store answer
-            quizAnswers[`question${currentQuestion}`] = value;
+            quizAnswers[`question${questionNum}`] = value;
             
-            // Enable next button
-            const nextBtn = element.parentNode.parentNode.querySelector('.quiz-next-btn');
-            nextBtn.classList.add('enabled');
+            // Auto-advance after a short delay for visual feedback
+            setTimeout(() => {
+                if (questionNum < 3) {
+                    nextQuestion(questionNum);
+                } else {
+                    // Last question, show results
+                    showResults();
+                }
+            }, 500); // 500ms delay for visual feedback
         }
 
         function nextQuestion(questionNum) {
