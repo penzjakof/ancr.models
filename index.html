@@ -171,6 +171,179 @@
             font-weight: bold;
         }
         
+        /* Quiz Modal */
+        .quiz-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+        }
+        
+        .quiz-content {
+            background-color: #ffffff;
+            margin: 5% auto;
+            padding: 30px;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            position: relative;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        
+        .quiz-question {
+            display: none;
+            animation: fadeIn 0.3s ease-in;
+        }
+        
+        .quiz-question.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .quiz-title {
+            color: var(--primary-color);
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .quiz-description {
+            color: var(--text-color);
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+        
+        .quiz-question-text {
+            color: var(--text-color);
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .quiz-option {
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 15px;
+            padding: 15px 20px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: var(--text-color);
+        }
+        
+        .quiz-option:hover {
+            background: var(--content-background-color);
+            border-color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+        
+        .quiz-option.selected {
+            background: var(--primary-color);
+            border-color: var(--primary-color);
+            color: white;
+        }
+        
+        .quiz-progress {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .quiz-progress-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #e9ecef;
+            transition: all 0.3s ease;
+        }
+        
+        .quiz-progress-dot.active {
+            background: var(--primary-color);
+        }
+        
+        .quiz-progress-dot.completed {
+            background: var(--secondary-color);
+        }
+        
+        .quiz-next-btn {
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 15px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            opacity: 0.5;
+            pointer-events: none;
+        }
+        
+        .quiz-next-btn.enabled {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        
+        .quiz-next-btn:hover.enabled {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .quiz-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #999;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 5px;
+        }
+        
+        .quiz-close:hover {
+            color: #333;
+        }
+        
+        @media (max-width: 768px) {
+            .quiz-content {
+                margin: 10% auto;
+                padding: 20px;
+                width: 95%;
+            }
+            
+            .quiz-title {
+                font-size: 20px;
+            }
+            
+            .quiz-question-text {
+                font-size: 18px;
+            }
+        }
+        
         /* Images */
         .image-container {
             display: flex;
@@ -272,6 +445,11 @@
         .btn-center-no-margin {
             text-align: center;
             margin: 0;
+        }
+        
+        .btn-center-bottom-spacing {
+            text-align: center;
+            margin: 0 0 30px 0;
         }
         
         /* Divider */
@@ -469,7 +647,7 @@
             
             <!-- CTA Button -->
             <div class="section-transparent">
-                <div class="btn-center-no-margin">
+                <div class="btn-center-bottom-spacing">
                 <a href="https://tinyurl.com/bdde3sps" target="_blank" class="btn-large btn-secondary">
                     <span class="btn-icon" style="margin-right: 15px;">
                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 42 42" fill="none">
@@ -613,5 +791,170 @@
 
         </div>
     </div>
+
+    <!-- Quiz Modal -->
+    <div id="quizModal" class="quiz-modal">
+        <div class="quiz-content">
+            <button class="quiz-close" onclick="closeQuiz()">&times;</button>
+            
+            <!-- Welcome Screen -->
+            <div id="quizWelcome" class="quiz-question active">
+                <div class="quiz-title">Привіт! 😊</div>
+                <div class="quiz-description">
+                    Ми дуже раді бачити інтерес до нашої пропозиції 😊.<br><br>
+                    Будемо вдячні, якщо відповісте на три простих запитання — це займе хвилинку та допоможе нам зробити максимально персоналізовану пропозицію саме для вас 🌟
+                </div>
+                <button class="quiz-next-btn enabled" onclick="startQuiz()">Почати опитування</button>
+            </div>
+            
+            <!-- Question 1 -->
+            <div id="question1" class="quiz-question">
+                <div class="quiz-progress">
+                    <div class="quiz-progress-dot active"></div>
+                    <div class="quiz-progress-dot"></div>
+                    <div class="quiz-progress-dot"></div>
+                </div>
+                <div class="quiz-question-text">Ви раніше співпрацювали з агенціями?</div>
+                <div class="quiz-options">
+                    <div class="quiz-option" onclick="selectOption(this, 'agencies_yes')">Так</div>
+                    <div class="quiz-option" onclick="selectOption(this, 'agencies_no')">Ні</div>
+                </div>
+                <button class="quiz-next-btn" onclick="nextQuestion(1)">Далі</button>
+            </div>
+            
+            <!-- Question 2 -->
+            <div id="question2" class="quiz-question">
+                <div class="quiz-progress">
+                    <div class="quiz-progress-dot completed"></div>
+                    <div class="quiz-progress-dot active"></div>
+                    <div class="quiz-progress-dot"></div>
+                </div>
+                <div class="quiz-question-text">Скільки фото ви готові робити на місяць?</div>
+                <div class="quiz-options">
+                    <div class="quiz-option" onclick="selectOption(this, 'photos_10_20')">10-20</div>
+                    <div class="quiz-option" onclick="selectOption(this, 'photos_20_50')">20-50</div>
+                    <div class="quiz-option" onclick="selectOption(this, 'photos_50_plus')">50+</div>
+                </div>
+                <button class="quiz-next-btn" onclick="nextQuestion(2)">Далі</button>
+            </div>
+            
+            <!-- Question 3 -->
+            <div id="question3" class="quiz-question">
+                <div class="quiz-progress">
+                    <div class="quiz-progress-dot completed"></div>
+                    <div class="quiz-progress-dot completed"></div>
+                    <div class="quiz-progress-dot active"></div>
+                </div>
+                <div class="quiz-question-text">Ви готові записувати короткі лайфстайл відео?</div>
+                <div class="quiz-options">
+                    <div class="quiz-option" onclick="selectOption(this, 'videos_yes')">Так</div>
+                    <div class="quiz-option" onclick="selectOption(this, 'videos_no')">Ні</div>
+                </div>
+                <button class="quiz-next-btn" onclick="showResults()">Завершити</button>
+            </div>
+            
+            <!-- Results Screen -->
+            <div id="quizResults" class="quiz-question">
+                <div class="quiz-title">Дякуємо! 🎉</div>
+                <div class="quiz-description">
+                    Ваші відповіді допоможуть нам підготувати персоналізовану пропозицію.<br><br>
+                    Натисніть кнопку нижче, щоб перейти в наш Телеграм та отримати детальну консультацію від менеджера! 💬
+                </div>
+                <div style="margin: 30px 0;">
+                    <div style="font-size: 48px; margin-bottom: 20px;">📱</div>
+                    <div style="font-size: 18px; font-weight: bold; color: var(--primary-color); margin-bottom: 20px;">
+                        Ваш менеджер вже чекає на вас!
+                    </div>
+                </div>
+                <button class="quiz-next-btn enabled" onclick="redirectToTelegram()" style="background: #0088cc; font-size: 18px; padding: 18px 35px;">
+                    📱 Перейти в телеграм
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let quizAnswers = {};
+        let currentQuestion = 0;
+
+        function openQuiz() {
+            document.getElementById('quizModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeQuiz() {
+            document.getElementById('quizModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        function startQuiz() {
+            document.getElementById('quizWelcome').classList.remove('active');
+            document.getElementById('question1').classList.add('active');
+            currentQuestion = 1;
+        }
+
+        function selectOption(element, value) {
+            // Remove selected class from all options in current question
+            const options = element.parentNode.querySelectorAll('.quiz-option');
+            options.forEach(option => option.classList.remove('selected'));
+            
+            // Add selected class to clicked option
+            element.classList.add('selected');
+            
+            // Store answer
+            quizAnswers[`question${currentQuestion}`] = value;
+            
+            // Enable next button
+            const nextBtn = element.parentNode.parentNode.querySelector('.quiz-next-btn');
+            nextBtn.classList.add('enabled');
+        }
+
+        function nextQuestion(questionNum) {
+            const currentQuestionEl = document.getElementById(`question${questionNum}`);
+            const nextQuestionEl = document.getElementById(`question${questionNum + 1}`);
+            
+            if (nextQuestionEl) {
+                currentQuestionEl.classList.remove('active');
+                nextQuestionEl.classList.add('active');
+                currentQuestion = questionNum + 1;
+            }
+        }
+
+        function showResults() {
+            // Process and log answers
+            console.log('Quiz answers:', quizAnswers);
+            
+            // Hide current question and show results
+            document.getElementById('question3').classList.remove('active');
+            document.getElementById('quizResults').classList.add('active');
+        }
+
+        function redirectToTelegram() {
+            // Close quiz and redirect to Telegram
+            closeQuiz();
+            
+            // Redirect to the original link
+            window.open('https://tinyurl.com/bdde3sps', '_blank');
+        }
+
+        // Update all CTA buttons to open quiz instead of direct redirect
+        document.addEventListener('DOMContentLoaded', function() {
+            const ctaButtons = document.querySelectorAll('a[href="https://tinyurl.com/bdde3sps"]');
+            ctaButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    openQuiz();
+                });
+            });
+        });
+
+        // Close quiz when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('quizModal');
+            if (event.target === modal) {
+                closeQuiz();
+            }
+        }
+    </script>
 </body>
 </html>
