@@ -2,460 +2,527 @@
 <html lang="uk-UA">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Ми допомагаємо нашим моделям перетворити профіль у пасивний дохід від 500$">
-    <meta property="og:description" content="Ми допомагаємо нашим моделям перетворити профіль у пасивний дохід від 500$">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <title>Модельний агентство - Пасивний дохід від 500$</title>
-
-    <meta property="name" content="Модельний агентство - Пасивний дохід від 500$">
-    <meta property="og:title" content="Модельний агентство - Пасивний дохід від 500$">
-    <meta property="og:type" content="website">
-
-    <!-- Facebook Pixel Code -->
-    <script>
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-            n.queue=[];t=b.createElement(e);t.async=!0;
-            t.src=v;s=b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t,s)}(window, document,'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '762125686349445');
-        fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=762125686349445&ev=PageView&noscript=1"/></noscript>
-    <!-- End Facebook Pixel Code -->
     
+    <title>Models Landing - Перетворіть профіль у пасивний дохід</title>
+    <meta name="description" content="Ми допомагаємо моделям перетворити профіль у пасивний дохід від 500$. Професійне оформлення, менеджмент акаунта, монетизація.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Models Landing - Перетворіть профіль у пасивний дохід">
+    <meta property="og:description" content="Ми допомагаємо моделям перетворити профіль у пасивний дохід від 500$. Професійне оформлення, менеджмент акаунта, монетизація.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./profile.jpg">
+    
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap">
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./logo.png">
+    
     <style>
+        /* Reset and base styles */
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            padding: 0;
+            margin: 0;
+            font-size: 18px;
+            font-family: 'Comfortaa', cursive;
+            line-height: 140%;
+            color: #ffffff;
+        }
+        
+        /* CSS Variables */
         :root {
             --page-background-color: #111d27;
             --content-background-color: rgba(255, 255, 255, 0);
             --text-color: #ffffff;
             --primary-color: #ffffff;
             --secondary-color: #5c2c97;
-            --p-font-family: Comfortaa, cursive;
-            --p-font-size: 18px;
-            --p-font-weight: normal;
-            --p-font-style: normal;
-            --p-line-height: 140%;
-            --h1-font-family: Comfortaa, cursive;
-            --h1-font-size: 48px;
-            --h1-font-weight: bold;
-            --h2-font-family: Comfortaa, cursive;
-            --h2-font-size: 36px;
-            --h2-font-weight: bold;
-            --h3-font-family: Comfortaa, cursive;
-            --h3-font-size: 22px;
-            --h3-font-weight: bold;
-            --secondary-button-border-radius: 50px;
-            --secondary-button-color: #ffffff;
+            --primary-button-background: #ffffff;
+            --primary-button-color: #111d27;
             --secondary-button-background: #5c2c97;
-            --secondary-button-font-size: 16px;
-            --secondary-button-font-weight: bold;
-            --secondary-button-font-family: Comfortaa, cursive;
+            --secondary-button-color: #ffffff;
         }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: var(--p-font-family);
-            font-size: var(--p-font-size);
-            color: var(--text-color);
+        
+        /* Main layout */
+        .main-container {
             background: var(--page-background-color);
             position: relative;
             min-height: 100vh;
+            padding: 20px;
         }
-
-        body::before {
+        
+        .main-container::before {
             content: "";
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('background.jpg');
+            z-index: 0;
+            background: url('./background.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: top center;
-            z-index: -1;
         }
-
-        .container {
-            max-width: 480px;
-            margin: 0 auto;
-            padding: 20px;
+        
+        .content-wrapper {
             position: relative;
             z-index: 1;
+            max-width: 480px;
+            margin: 0 auto;
         }
-
-        .logo-section {
+        
+        /* Sections */
+        .section {
+            margin: 30px 0;
+        }
+        
+        .section-with-bg {
+            background: var(--content-background-color);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+        
+        .section-white {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 20px;
+            margin: 30px 0;
+        }
+        
+        /* Typography */
+        h1 {
+            font-size: 48px;
+            font-weight: bold;
+            line-height: 120%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        h2 {
+            font-size: 36px;
+            font-weight: bold;
+            line-height: 120%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        h3 {
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 120%;
+            margin: 0;
+            padding: 0;
+            color: #111d27;
+        }
+        
+        p {
+            font-size: 18px;
+            line-height: 140%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .text-center {
             text-align: center;
-            padding: 50px 0 20px 0;
         }
-
-        .logo-section img {
+        
+        .text-dark {
+            color: #111d27;
+        }
+        
+        .text-purple {
+            color: #5c2c97;
+        }
+        
+        .text-small {
+            font-size: 16px;
+        }
+        
+        .text-xs {
+            font-size: 12px;
+        }
+        
+        /* Images */
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            border-radius: 20px;
+        }
+        
+        .image-container img {
             max-width: 100%;
             height: auto;
+            display: block;
         }
-
-        .hero-section {
-            background: rgba(255, 255, 255, 0);
-            padding: 20px 40px;
-            border-radius: 15px;
-            margin: 20px 0;
+        
+        .logo-container {
             text-align: center;
+            padding: 50px 0;
         }
-
-        .hero-section h1 {
-            font-family: var(--h1-font-family);
-            font-size: var(--h1-font-size);
-            font-weight: var(--h1-font-weight);
-            line-height: 120%;
-            margin-bottom: 20px;
+        
+        .logo-container img {
+            max-width: 200px;
+            height: auto;
         }
-
-        .btn-primary {
+        
+        /* Buttons */
+        .btn {
             display: inline-flex;
             align-items: center;
-            padding: 10px 16px;
+            justify-content: center;
+            padding: 15px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 120%;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+            border: none;
+            font-family: inherit;
+        }
+        
+        .btn:hover {
+            opacity: 0.8;
+            text-decoration: none;
+        }
+        
+        .btn-primary {
+            background: var(--primary-button-background);
+            color: var(--primary-button-color);
+        }
+        
+        .btn-secondary {
             background: var(--secondary-button-background);
             color: var(--secondary-button-color);
-            text-decoration: none;
-            border-radius: var(--secondary-button-border-radius);
-            font-weight: var(--secondary-button-font-weight);
-            font-size: var(--secondary-button-font-size);
-            font-family: var(--secondary-button-font-family);
-            margin: 20px 0;
-            transition: opacity 0.3s ease;
         }
-
-        .btn-primary:hover {
-            opacity: 0.8;
-        }
-
-        .btn-primary .icon {
+        
+        .btn-icon {
             margin-right: 16px;
         }
-
-        .btn-primary svg {
+        
+        .btn-icon svg {
             width: 24px;
             height: 24px;
+        }
+        
+        .btn-icon svg path {
             fill: currentColor;
         }
-
-        .guarantees {
-            background: rgba(255, 255, 255, 0);
-            padding: 30px;
-            margin: 20px 0;
+        
+        .btn-center {
             text-align: center;
-        }
-
-        .guarantees p {
-            font-size: 16px;
-            font-weight: bold;
-        }
-
-        .content-section {
-            background: #ffffff;
             margin: 20px 0;
-            border-radius: 20px;
-            overflow: hidden;
         }
-
-        .content-section.top-rounded {
-            border-bottom-left-radius: 0;
-            border-bottom-right-radius: 0;
-        }
-
-        .content-section.bottom-rounded {
-            border-top-left-radius: 0;
-            border-top-right-radius: 0;
-        }
-
-        .content-section.no-rounded {
-            border-radius: 0;
-        }
-
-        .content-section img {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 20px;
-        }
-
-        .content-section .text-content {
-            padding: 30px;
-            text-align: center;
-        }
-
-        .content-section h3 {
-            color: #111d27;
-            font-family: var(--h3-font-family);
-            font-size: var(--h3-font-size);
-            font-weight: var(--h3-font-weight);
-            margin-bottom: 10px;
-        }
-
-        .content-section p {
-            color: #111d27;
-            font-size: var(--p-font-size);
-            line-height: var(--p-line-height);
-        }
-
+        
+        /* Divider */
         .divider {
-            background: #ffffff;
-            padding: 30px;
-            margin: 0;
-        }
-
-        .divider-line {
             width: 100%;
-            border-top: 1px solid #5c2c97;
+            height: 1px;
+            background: var(--secondary-color);
+            margin: 30px 0;
         }
-
-        .cta-section {
-            background: rgba(255, 255, 255, 0);
-            padding: 0;
+        
+        /* Spacing */
+        .spacer-small {
+            height: 20px;
+        }
+        
+        .spacer-medium {
+            height: 40px;
+        }
+        
+        .spacer-large {
+            height: 60px;
+        }
+        
+        /* Features highlight */
+        .highlight-text {
+            background: var(--content-background-color);
+            padding: 30px;
+            border-radius: 0;
             text-align: center;
-            margin: 60px 0;
         }
-
-        .cta-section h1 {
-            color: #000000;
-            font-size: 20px;
-            margin-bottom: 20px;
-        }
-
-        .reviews-section {
-            background: var(--page-background-color);
-            padding: 40px;
-            border-radius: 20px;
+        
+        /* Quote styles */
+        .quote-divider {
             text-align: center;
             margin: 20px 0;
         }
-
-        .reviews-section h2 {
-            font-family: var(--h2-font-family);
-            font-size: var(--h2-font-size);
-            font-weight: var(--h2-font-weight);
-            margin-bottom: 30px;
+        
+        .quote-divider img {
+            max-width: 100px;
+            height: auto;
         }
-
-        .review-item {
-            margin: 30px 0;
-        }
-
-        .review-item p {
-            margin: 10px 0;
-        }
-
-        .review-item em {
-            font-style: italic;
-        }
-
-        .review-divider {
-            text-align: center;
-            margin: 30px 0;
-        }
-
-        .contact-section {
-            text-align: center;
-            margin: 20px 0;
-        }
-
-        .contact-section p {
-            margin: 10px 0;
-            color: #843fa1;
-            font-weight: bold;
-            font-size: 14px;
-            text-transform: uppercase;
-        }
-
+        
+        /* Contact info */
         .contact-info {
             background: rgba(255, 255, 255, 0);
-            padding: 0 40px;
+            padding: 40px;
             border-radius: 6px;
             text-align: center;
         }
-
-        .contact-info p {
-            margin: 10px 0;
-            color: var(--text-color);
-            font-size: var(--p-font-size);
-            text-transform: none;
-            font-weight: normal;
+        
+        /* Reviews section */
+        .reviews-header {
+            background: var(--page-background-color);
+            padding: 40px;
+            border-radius: 20px 20px 0 0;
+            text-align: center;
         }
-
+        
+        .review-item {
+            background: var(--page-background-color);
+            padding: 30px 40px;
+            margin: 0;
+            text-align: center;
+        }
+        
+        .review-item em {
+            font-style: italic;
+            line-height: 140%;
+        }
+        
+        .review-author {
+            margin-top: 15px;
+            font-size: 16px;
+        }
+        
+        .review-years {
+            font-size: 12px;
+            color: #ccc;
+        }
+        
+        /* Final CTA section */
+        .final-cta {
+            background: rgba(255, 255, 255, 0);
+            padding: 40px;
+            border-radius: 6px;
+            text-align: center;
+        }
+        
+        /* Mobile responsiveness */
         @media (max-width: 768px) {
-            .container {
-                padding: 15px;
+            .main-container {
+                padding: 10px;
             }
             
-            .hero-section h1 {
-                font-size: 24px;
-            }
-            
-            .content-section .text-content {
+            .section-with-bg,
+            .section-white {
                 padding: 20px;
+                margin: 20px 0;
+            }
+            
+            h1 {
+                font-size: 36px;
+            }
+            
+            h2 {
+                font-size: 28px;
+            }
+            
+            h3 {
+                font-size: 20px;
+            }
+            
+            .logo-container {
+                padding: 30px 0;
+            }
+            
+            .btn {
+                padding: 12px 20px;
+                font-size: 14px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Logo Section -->
-        <div class="logo-section">
-            <img src="logo.png" alt="лого">
-        </div>
-
-        <!-- Hero Section -->
-        <div class="hero-section">
-            <p>Ми допомагаємо нашим моделям перетворити профіль у пасивний дохід від 500$</p>
+    <div class="main-container">
+        <div class="content-wrapper">
+            <!-- Spacer -->
+            <div class="spacer-small"></div>
             
-            <a href="https://tinyurl.com/bdde3sps" class="btn-primary" target="_blank">
-                <div class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M19.9729 4.10811C24.4509 -0.369875 31.7112 -0.369875 36.1892 4.10811C40.6672 8.5861 40.6672 15.8463 36.1892 20.3243L30.7838 25.7297C26.3058 30.2077 19.0455 30.2077 14.5675 25.7297L13.8919 25.0541C13.1455 24.3077 13.1455 23.0977 13.8919 22.3514C14.6382 21.605 15.8482 21.605 16.5946 22.3514L17.2702 23.027C20.2556 26.0124 25.0957 26.0124 28.0811 23.027L33.4865 17.6216C36.4718 14.6363 36.4718 9.79614 33.4865 6.81081C30.5011 3.82549 25.661 3.82549 22.6756 6.81081L19.2973 10.1892C18.5509 10.9355 17.3409 10.9355 16.5946 10.1892C15.8482 9.44286 15.8482 8.23282 16.5946 7.48649L19.9729 4.10811Z" fill="currentColor"></path>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M24.0275 18.9729C21.0422 15.9876 16.202 15.9876 13.2167 18.9729L7.81126 24.3783C4.82593 27.3637 4.82593 32.2038 7.81126 35.1891C10.7966 38.1745 15.6367 38.1745 18.6221 35.1891L22.0004 31.8108C22.7468 31.0644 23.9568 31.0644 24.7032 31.8108C25.4495 32.5571 25.4495 33.7671 24.7032 34.5135L21.3248 37.8918C16.8468 42.3698 9.58654 42.3698 5.10855 37.8918C0.630567 33.4139 0.630567 26.1536 5.10855 21.6756L10.514 16.2702C14.9919 11.7922 22.2522 11.7922 26.7302 16.2702L27.4059 16.9459C28.1522 17.6922 28.1522 18.9023 27.4059 19.6486C26.6595 20.3949 25.4495 20.3949 24.7032 19.6486L24.0275 18.9729Z" fill="currentColor"></path>
-                    </svg>
-                </div>
-                Звʼязатись з менеджером
-            </a>
-        </div>
-
-        <!-- Guarantees Section -->
-        <div class="guarantees">
-            <p><strong>❌ Не Онлік | 🚫 Без Інтиму | 💸 Без вкладень</strong></p>
-        </div>
-
-        <!-- Profile Creation Section -->
-        <div class="content-section top-rounded">
-            <img src="profile.jpg" alt="проф">
-        </div>
-        <div class="content-section no-rounded">
-            <div class="text-content">
-                <h3>Створення привабливого профілю</h3>
-                <p>Професійне оформлення, якісний контент, унікальний стиль.</p>
-            </div>
-        </div>
-        <div class="divider">
-            <div class="divider-line"></div>
-        </div>
-        <div class="content-section no-rounded">
-            <img src="team.png" alt="команда">
-        </div>
-        <div class="content-section no-rounded">
-            <div class="text-content">
-                <h3>Менеджмент акаунта</h3>
-                <p>Ведення сторінки, таргетинг, постійна активність та залучення фанів.</p>
-            </div>
-        </div>
-        <div class="divider">
-            <div class="divider-line"></div>
-        </div>
-        <div class="content-section no-rounded">
-            <img src="gifts.png" alt="подарунки">
-        </div>
-        <div class="content-section bottom-rounded">
-            <div class="text-content">
-                <h3>Набір прихильників і монетизація</h3>
-                <p>Партнерські програми, подарунки та додаткові джерела прибутку</p>
-            </div>
-        </div>
-
-        <!-- CTA Section -->
-        <div class="cta-section">
-            <h1>Залишились запитання?</h1>
-            <a href="https://tinyurl.com/bdde3sps" class="btn-primary" target="_blank">
-                <div class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M19.9729 4.10811C24.4509 -0.369875 31.7112 -0.369875 36.1892 4.10811C40.6672 8.5861 40.6672 15.8463 36.1892 20.3243L30.7838 25.7297C26.3058 30.2077 19.0455 30.2077 14.5675 25.7297L13.8919 25.0541C13.1455 24.3077 13.1455 23.0977 13.8919 22.3514C14.6382 21.605 15.8482 21.605 16.5946 22.3514L17.2702 23.027C20.2556 26.0124 25.0957 26.0124 28.0811 23.027L33.4865 17.6216C36.4718 14.6363 36.4718 9.79614 33.4865 6.81081C30.5011 3.82549 25.661 3.82549 22.6756 6.81081L19.2973 10.1892C18.5509 10.9355 17.3409 10.9355 16.5946 10.1892C15.8482 9.44286 15.8482 8.23282 16.5946 7.48649L19.9729 4.10811Z" fill="currentColor"></path>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M24.0275 18.9729C21.0422 15.9876 16.202 15.9876 13.2167 18.9729L7.81126 24.3783C4.82593 27.3637 4.82593 32.2038 7.81126 35.1891C10.7966 38.1745 15.6367 38.1745 18.6221 35.1891L22.0004 31.8108C22.7468 31.0644 23.9568 31.0644 24.7032 31.8108C25.4495 32.5571 25.4495 33.7671 24.7032 34.5135L21.3248 37.8918C16.8468 42.3698 9.58654 42.3698 5.10855 37.8918C0.630567 33.4139 0.630567 26.1536 5.10855 21.6756L10.514 16.2702C14.9919 11.7922 22.2522 11.7922 26.7302 16.2702L27.4059 16.9459C28.1522 17.6922 28.1522 18.9023 27.4059 19.6486C26.6595 20.3949 25.4495 20.3949 24.7032 19.6486L24.0275 18.9729Z" fill="currentColor"></path>
-                    </svg>
-                </div>
-                Звʼязатись з менеджером
-            </a>
-        </div>
-
-        <!-- Reviews Section -->
-        <div class="reviews-section">
-            <h2>Відгуки Моделей</h2>
+            <!-- Spacer -->
+            <div class="spacer-large"></div>
             
-            <div class="review-divider">
-                <img src="divider.png" alt="divider">
+            <!-- Logo Section -->
+            <div class="logo-container">
+                <img src="./logo.png" alt="Логотип" />
             </div>
             
-            <div class="review-item">
-                <p><em>Ніколи не думала, що вести профіль може бути так легко. Агенція взяла на себе все і залишили мені лише приємний дохід</em></p>
-                <p>- Анна, 21 рік<br><span style="font-size: 12px;">3 роки з нами</span></p>
+            <!-- Main Hero Section -->
+            <div class="section-with-bg text-center">
+                <p>Ми допомагаємо нашим моделям перетворити профіль у пасивний дохід від 500$</p>
             </div>
             
-            <div class="review-divider">
-                <img src="divider.png" alt="divider">
-            </div>
-            
-            <div class="review-item">
-                <p><em>До цього мій профіль виглядав пусто і не привертав уваги. Агенція допомогла правильно його налаштувати, тепер отримую набагато більше уваги та подарунків від шанувальників</em></p>
-                <p>- Євгенія, 54 роки<br><span style="font-size: 12px;">1 рік з нами</span></p>
-            </div>
-            
-            <div class="review-divider">
-                <img src="divider.png" alt="divider">
-            </div>
-            
-            <div class="review-item">
-                <p><em>Я боялася, що буде складно вести сторінку, відповідати, підтримувати інтерес. Але вони все взяли на себе, що мені комфортно, а результат – більше знайомств і впевненість у собі</em></p>
-                <p>- Дарина, 37 років<br><span style="font-size: 12px;">5 років з нами</span></p>
-            </div>
-
-            <!-- Contact Section -->
-            <div class="review-divider">
-                <img src="logo.png" alt="лого" style="max-width: 100px;">
-            </div>
-            
-            <div class="contact-section">
-                <p>Ми завжди на зв'язку</p>
-                
-                <a href="https://tinyurl.com/bdde3sps" class="btn-primary" target="_blank">
-                    <div class="icon">
+            <!-- CTA Button -->
+            <div class="btn-center">
+                <a href="https://tinyurl.com/bdde3sps" target="_blank" class="btn btn-secondary">
+                    <span class="btn-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M19.9729 4.10811C24.4509 -0.369875 31.7112 -0.369875 36.1892 4.10811C40.6672 8.5861 40.6672 15.8463 36.1892 20.3243L30.7838 25.7297C26.3058 30.2077 19.0455 30.2077 14.5675 25.7297L13.8919 25.0541C13.1455 24.3077 13.1455 23.0977 13.8919 22.3514C14.6382 21.605 15.8482 21.605 16.5946 22.3514L17.2702 23.027C20.2556 26.0124 25.0957 26.0124 28.0811 23.027L33.4865 17.6216C36.4718 14.6363 36.4718 9.79614 33.4865 6.81081C30.5011 3.82549 25.661 3.82549 22.6756 6.81081L19.2973 10.1892C18.5509 10.9355 17.3409 10.9355 16.5946 10.1892C15.8482 9.44286 15.8482 8.23282 16.5946 7.48649L19.9729 4.10811Z" fill="currentColor"></path>
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M24.0275 18.9729C21.0422 15.9876 16.202 15.9876 13.2167 18.9729L7.81126 24.3783C4.82593 27.3637 4.82593 32.2038 7.81126 35.1891C10.7966 38.1745 15.6367 38.1745 18.6221 35.1891L22.0004 31.8108C22.7468 31.0644 23.9568 31.0644 24.7032 31.8108C25.4495 32.5571 25.4495 33.7671 24.7032 34.5135L21.3248 37.8918C16.8468 42.3698 9.58654 42.3698 5.10855 37.8918C0.630567 33.4139 0.630567 26.1536 5.10855 21.6756L10.514 16.2702C14.9919 11.7922 22.2522 11.7922 26.7302 16.2702L27.4059 16.9459C28.1522 17.6922 28.1522 18.9023 27.4059 19.6486C26.6595 20.3949 25.4495 20.3949 24.7032 19.6486L24.0275 18.9729Z" fill="currentColor"></path>
                         </svg>
-                    </div>
+                    </span>
                     Звʼязатись з менеджером
                 </a>
             </div>
             
+            <!-- Highlight Section -->
+            <div class="highlight-text text-center">
+                <p class="text-small"><strong>❌ Не Онлік | 🚫 Без Інтиму | 💸 Без вкладень</strong></p>
+            </div>
+            
+            <!-- Profile Image -->
+            <div class="section-white">
+                <div class="image-container">
+                    <img src="./profile.jpg" alt="Профіль" />
+                </div>
+            </div>
+            
+            <!-- Feature 1 -->
+            <div class="section-white text-center">
+                <h3>Створення привабливого профілю</h3>
+                <p class="text-dark">Професійне оформлення, якісний контент, унікальний стиль.</p>
+            </div>
+            
+            <!-- Divider -->
+            <div class="section-white">
+                <div class="divider"></div>
+            </div>
+            
+            <!-- Team Image -->
+            <div class="section-white">
+                <div class="image-container">
+                    <img src="./team.png" alt="Команда" />
+                </div>
+            </div>
+            
+            <!-- Feature 2 -->
+            <div class="section-white text-center">
+                <h3>Менеджмент акаунта</h3>
+                <p class="text-dark">Ведення сторінки, таргетинг, постійна активність та залучення фанів.</p>
+            </div>
+            
+            <!-- Divider -->
+            <div class="section-white">
+                <div class="divider"></div>
+            </div>
+            
+            <!-- Gifts Image -->
+            <div class="section-white">
+                <div class="image-container">
+                    <img src="./gifts.png" alt="Подарунки" />
+                </div>
+            </div>
+            
+            <!-- Feature 3 -->
+            <div class="section-white text-center">
+                <h3>Набір прихильників і монетизація</h3>
+                <p class="text-dark">Партнерські програми, подарунки та додаткові джерела прибутку</p>
+            </div>
+            
+            <!-- Spacer -->
+            <div class="spacer-large"></div>
+            
+            <!-- Questions Section -->
+            <div class="text-center">
+                <h1 class="text-small" style="color: #000000; font-size: 20px;">Залишились запитання?</h1>
+            </div>
+            
+            <!-- CTA Button 2 -->
+            <div class="btn-center">
+                <a href="https://tinyurl.com/bdde3sps" target="_blank" class="btn btn-secondary">
+                    <span class="btn-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M19.9729 4.10811C24.4509 -0.369875 31.7112 -0.369875 36.1892 4.10811C40.6672 8.5861 40.6672 15.8463 36.1892 20.3243L30.7838 25.7297C26.3058 30.2077 19.0455 30.2077 14.5675 25.7297L13.8919 25.0541C13.1455 24.3077 13.1455 23.0977 13.8919 22.3514C14.6382 21.605 15.8482 21.605 16.5946 22.3514L17.2702 23.027C20.2556 26.0124 25.0957 26.0124 28.0811 23.027L33.4865 17.6216C36.4718 14.6363 36.4718 9.79614 33.4865 6.81081C30.5011 3.82549 25.661 3.82549 22.6756 6.81081L19.2973 10.1892C18.5509 10.9355 17.3409 10.9355 16.5946 10.1892C15.8482 9.44286 15.8482 8.23282 16.5946 7.48649L19.9729 4.10811Z" fill="currentColor"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M24.0275 18.9729C21.0422 15.9876 16.202 15.9876 13.2167 18.9729L7.81126 24.3783C4.82593 27.3637 4.82593 32.2038 7.81126 35.1891C10.7966 38.1745 15.6367 38.1745 18.6221 35.1891L22.0004 31.8108C22.7468 31.0644 23.9568 31.0644 24.7032 31.8108C25.4495 32.5571 25.4495 33.7671 24.7032 34.5135L21.3248 37.8918C16.8468 42.3698 9.58654 42.3698 5.10855 37.8918C0.630567 33.4139 0.630567 26.1536 5.10855 21.6756L10.514 16.2702C14.9919 11.7922 22.2522 11.7922 26.7302 16.2702L27.4059 16.9459C28.1522 17.6922 28.1522 18.9023 27.4059 19.6486C26.6595 20.3949 25.4495 20.3949 24.7032 19.6486L24.0275 18.9729Z" fill="currentColor"></path>
+                        </svg>
+                    </span>
+                    Звʼязатись з менеджером
+                </a>
+            </div>
+            
+            <!-- Spacer -->
+            <div class="spacer-large"></div>
+            
+            <!-- Reviews Section -->
+            <div class="reviews-header">
+                <h2>Відгуки Моделей</h2>
+            </div>
+            
+            <!-- Review 1 -->
+            <div class="review-item">
+                <div class="quote-divider">
+                    <img src="./divider.png" alt="Роздільник" />
+                </div>
+                <p><em>Ніколи не думала, що вести профіль може бути так легко. Агенція взяла на себе все і залишили мені лише приємний дохід</em></p>
+                <p class="review-author">- Анна, 21 рік<br><span class="review-years">3 роки з нами</span></p>
+            </div>
+            
+            <!-- Review 2 -->
+            <div class="review-item">
+                <div class="quote-divider">
+                    <img src="./divider.png" alt="Роздільник" />
+                </div>
+                <p><em>До цього мій профіль виглядав пусто і не привертав уваги. Агенція допомогла правильно його налаштувати, тепер отримую набагато більше уваги та подарунків від шанувальників</em></p>
+                <p class="review-author">- Євгенія, 54 роки<br><span class="review-years">1 рік з нами</span></p>
+            </div>
+            
+            <!-- Review 3 -->
+            <div class="review-item" style="border-radius: 0 0 20px 20px;">
+                <p><em>Я боялася, що буде складно вести сторінку, відповідати, підтримувати інтерес. Але вони все взяли на себе, що мені комфортно, а результат – більше знайомств і впевненість у собі</em></p>
+                <p class="review-author">- Дарина, 37 років<br><span class="review-years">5 років з нами</span></p>
+            </div>
+            
+            <!-- Spacer -->
+            <div class="spacer-medium"></div>
+            
+            <!-- Contact Image -->
+            <div class="text-center">
+                <img src="./background.jpg" alt="Контакти" style="max-width: 100%; border-radius: 6px;" />
+            </div>
+            
+            <!-- Final CTA -->
+            <div class="final-cta">
+                <p class="text-purple" style="text-transform: uppercase; font-weight: bold; font-size: 14px;">Ми завжди на зв'язку</p>
+                
+                <div class="btn-center">
+                    <a href="https://tinyurl.com/bdde3sps" target="_blank" class="btn btn-secondary">
+                        <span class="btn-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M19.9729 4.10811C24.4509 -0.369875 31.7112 -0.369875 36.1892 4.10811C40.6672 8.5861 40.6672 15.8463 36.1892 20.3243L30.7838 25.7297C26.3058 30.2077 19.0455 30.2077 14.5675 25.7297L13.8919 25.0541C13.1455 24.3077 13.1455 23.0977 13.8919 22.3514C14.6382 21.605 15.8482 21.605 16.5946 22.3514L17.2702 23.027C20.2556 26.0124 25.0957 26.0124 28.0811 23.027L33.4865 17.6216C36.4718 14.6363 36.4718 9.79614 33.4865 6.81081C30.5011 3.82549 25.661 3.82549 22.6756 6.81081L19.2973 10.1892C18.5509 10.9355 17.3409 10.9355 16.5946 10.1892C15.8482 9.44286 15.8482 8.23282 16.5946 7.48649L19.9729 4.10811Z" fill="currentColor"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M24.0275 18.9729C21.0422 15.9876 16.202 15.9876 13.2167 18.9729L7.81126 24.3783C4.82593 27.3637 4.82593 32.2038 7.81126 35.1891C10.7966 38.1745 15.6367 38.1745 18.6221 35.1891L22.0004 31.8108C22.7468 31.0644 23.9568 31.0644 24.7032 31.8108C25.4495 32.5571 25.4495 33.7671 24.7032 34.5135L21.3248 37.8918C16.8468 42.3698 9.58654 42.3698 5.10855 37.8918C0.630567 33.4139 0.630567 26.1536 5.10855 21.6756L10.514 16.2702C14.9919 11.7922 22.2522 11.7922 26.7302 16.2702L27.4059 16.9459C28.1522 17.6922 28.1522 18.9023 27.4059 19.6486C26.6595 20.3949 25.4495 20.3949 24.7032 19.6486L24.0275 18.9729Z" fill="currentColor"></path>
+                            </svg>
+                        </span>
+                        Звʼязатись з менеджером
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Spacer -->
+            <div class="spacer-medium"></div>
+            
+            <!-- Contact Info -->
             <div class="contact-info">
                 <p>Телефон:<br>+380509875643</p>
-                <p>Email:<br>manager@ancrush.com</p>
+                <p style="margin-top: 15px;">Email:<br>manager@ancrush.com</p>
             </div>
+            
+            <!-- Spacer -->
+            <div class="spacer-medium"></div>
         </div>
     </div>
-
-    <script>
-        // Meta Pixel tracking for buttons
-        document.addEventListener('DOMContentLoaded', function() {
-            const buttons = document.querySelectorAll('a[href="https://tinyurl.com/bdde3sps"]');
-            
-            buttons.forEach(function(button) {
-                button.addEventListener('click', function() {
-                    if (typeof fbq !== 'undefined') {
-                        fbq('track', 'Lead', { content_name: 'models' });
-                    }
-                });
-            });
-        });
-    </script>
 </body>
 </html>
