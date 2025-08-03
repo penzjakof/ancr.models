@@ -159,6 +159,18 @@
             font-size: 12px;
         }
         
+        .highlight-list {
+            margin: 20px 0;
+        }
+        
+        .highlight-list p {
+            font-size: 20px;
+            margin: 8px 0;
+            color: var(--text-color);
+            line-height: 1.4;
+            font-weight: bold;
+        }
+        
         /* Images */
         .image-container {
             display: flex;
@@ -265,6 +277,22 @@
             margin: 30px 0;
         }
         
+        /* Image divider for white sections */
+        .divider-image {
+            text-align: center;
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .divider-image img {
+            max-width: 100px;
+            height: auto;
+            width: auto;
+            display: block;
+        }
+        
         /* Spacing */
         .spacer-small {
             height: 20px;
@@ -305,12 +333,16 @@
         .quote-divider {
             text-align: center;
             margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         
         .quote-divider img {
-            max-width: 100%;
+            max-width: 100px;
             height: auto;
-            width: 100%;
+            width: auto;
+            display: block;
         }
         
         /* Contact info */
@@ -418,7 +450,11 @@
             
             <!-- Highlight Section -->
             <div class="section-no-padding text-center">
-                <p class="text-small"><strong>❌ Не Онлік | 🚫 Без Інтиму | 💸 Без вкладень</strong></p>
+                <div class="highlight-list">
+                    <p><strong>❌ Не Онлік</strong></p>
+                    <p><strong>🚫 Без Інтиму</strong></p>
+                    <p><strong>💸 Без вкладень</strong></p>
+                </div>
             </div>
             
             <!-- Main Hero Section -->
@@ -429,9 +465,9 @@
             <!-- CTA Button -->
             <div class="section-transparent">
                 <div class="btn-center">
-                <a href="https://tinyurl.com/bdde3sps" target="_blank" class="btn btn-secondary">
-                    <span class="btn-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
+                <a href="https://tinyurl.com/bdde3sps" target="_blank" class="btn-large btn-secondary">
+                    <span class="btn-icon" style="margin-right: 15px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 42 42" fill="none">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M19.9729 4.10811C24.4509 -0.369875 31.7112 -0.369875 36.1892 4.10811C40.6672 8.5861 40.6672 15.8463 36.1892 20.3243L30.7838 25.7297C26.3058 30.2077 19.0455 30.2077 14.5675 25.7297L13.8919 25.0541C13.1455 24.3077 13.1455 23.0977 13.8919 22.3514C14.6382 21.605 15.8482 21.605 16.5946 22.3514L17.2702 23.027C20.2556 26.0124 25.0957 26.0124 28.0811 23.027L33.4865 17.6216C36.4718 14.6363 36.4718 9.79614 33.4865 6.81081C30.5011 3.82549 25.661 3.82549 22.6756 6.81081L19.2973 10.1892C18.5509 10.9355 17.3409 10.9355 16.5946 10.1892C15.8482 9.44286 15.8482 8.23282 16.5946 7.48649L19.9729 4.10811Z" fill="currentColor"></path>
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M24.0275 18.9729C21.0422 15.9876 16.202 15.9876 13.2167 18.9729L7.81126 24.3783C4.82593 27.3637 4.82593 32.2038 7.81126 35.1891C10.7966 38.1745 15.6367 38.1745 18.6221 35.1891L22.0004 31.8108C22.7468 31.0644 23.9568 31.0644 24.7032 31.8108C25.4495 32.5571 25.4495 33.7671 24.7032 34.5135L21.3248 37.8918C16.8468 42.3698 9.58654 42.3698 5.10855 37.8918C0.630567 33.4139 0.630567 26.1536 5.10855 21.6756L10.514 16.2702C14.9919 11.7922 22.2522 11.7922 26.7302 16.2702L27.4059 16.9459C28.1522 17.6922 28.1522 18.9023 27.4059 19.6486C26.6595 20.3949 25.4495 20.3949 24.7032 19.6486L24.0275 18.9729Z" fill="currentColor"></path>
                         </svg>
@@ -534,13 +570,16 @@
             
             <!-- Review 3 -->
             <div class="review-item" style="border-radius: 0 0 20px 20px;">
+                <div class="quote-divider">
+                    <img src="./divider.png" alt="Роздільник" />
+                </div>
                 <p><em>Я боялася, що буде складно вести сторінку, відповідати, підтримувати інтерес. Але вони все взяли на себе, що мені комфортно, а результат – більше знайомств і впевненість у собі</em></p>
                 <p class="review-author">- Дарина, 37 років<br><span class="review-years">5 років з нами</span></p>
             </div>
             
             <!-- Contact Image -->
             <div class="cta-with-image">
-                <img src="./background.jpg" alt="Контакти" style="max-width: 100%; border-radius: 6px;" />
+                <img src="./logo.png" alt="Логотип" style="max-width: 100%; border-radius: 6px;" />
             </div>
             
             <!-- Final CTA -->
