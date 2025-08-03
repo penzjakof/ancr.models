@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
-    <title>Models Landing - Перетворіть профіль у пасивний дохід</title>
+    <title>Ancrush Models</title>
     <meta name="description" content="Ми допомагаємо моделям перетворити профіль у пасивний дохід від 500$. Професійне оформлення, менеджмент акаунта, монетизація.">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Models Landing - Перетворіть профіль у пасивний дохід">
+    <meta property="og:title" content="Ancrush Models">
     <meta property="og:description" content="Ми допомагаємо моделям перетворити профіль у пасивний дохід від 500$. Професійне оформлення, менеджмент акаунта, монетизація.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="./profile.jpg">
@@ -21,6 +21,27 @@
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="./logo.png">
+    
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    
+    // Initialize Meta Pixel - Replace YOUR_PIXEL_ID with your actual pixel ID
+    // fbq('init', 'YOUR_PIXEL_ID');
+    // fbq('track', 'PageView');
+    </script>
+    <noscript>
+    <!-- Replace YOUR_PIXEL_ID with your actual pixel ID -->
+    <!-- <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1" /> -->
+    </noscript>
+    <!-- End Meta Pixel Code -->
     
     <style>
         /* Reset and base styles */
@@ -634,15 +655,15 @@
             <!-- CTA Button -->
             <div class="section-transparent">
                 <div class="btn-center-bottom-spacing">
-                <a href="https://tinyurl.com/bdde3sps" target="_blank" class="btn-large btn-secondary">
+                <button onclick="openQuiz()" class="btn-large btn-secondary">
                     <span class="btn-icon" style="margin-right: 15px;">
                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 42 42" fill="none">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M19.9729 4.10811C24.4509 -0.369875 31.7112 -0.369875 36.1892 4.10811C40.6672 8.5861 40.6672 15.8463 36.1892 20.3243L30.7838 25.7297C26.3058 30.2077 19.0455 30.2077 14.5675 25.7297L13.8919 25.0541C13.1455 24.3077 13.1455 23.0977 13.8919 22.3514C14.6382 21.605 15.8482 21.605 16.5946 22.3514L17.2702 23.027C20.2556 26.0124 25.0957 26.0124 28.0811 23.027L33.4865 17.6216C36.4718 14.6363 36.4718 9.79614 33.4865 6.81081C30.5011 3.82549 25.661 3.82549 22.6756 6.81081L19.2973 10.1892C18.5509 10.9355 17.3409 10.9355 16.5946 10.1892C15.8482 9.44286 15.8482 8.23282 16.5946 7.48649L19.9729 4.10811Z" fill="currentColor"></path>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M24.0275 18.9729C21.0422 15.9876 16.202 15.9876 13.2167 18.9729L7.81126 24.3783C4.82593 27.3637 4.82593 32.2038 7.81126 35.1891C10.7966 38.1745 15.6367 38.1745 18.6221 35.1891L22.0004 31.8108C22.7468 31.0644 23.9568 31.0644 24.7032 31.8108C25.4495 32.5571 25.4495 33.7671 24.7032 34.5135L21.3248 37.8918C16.8468 42.3698 9.58654 42.3698 5.10855 37.8918C0.630567 33.4139 0.630567 26.1536 5.10855 21.6756L10.514 16.2702C14.9919 11.7922 22.2522 11.7922 26.7302 16.2702L27.4059 16.9459C28.1522 17.6922 28.1522 18.9023 27.4059 19.6486C26.6595 20.3949 25.4495 20.3949 24.7032 19.6486L24.0275 18.9729Z" fill="currentColor"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M24.0275 18.9729C21.0422 15.9876 16.202 15.9876 13.2167 18.9729L7.81126 24.3783C4.82593 27.3637 4.82593 32.2038 7.81126 35.1891C10.7966 38.1745 15.6367 38.1745 18.6221 35.1891L22.0004 31.8108C22.7468 31-0644 23.9568 31.0644 24.7032 31.8108C25.4495 32.5571 25.4495 33.7671 24.7032 34.5135L21.3248 37.8918C16.8468 42.3698 9.58654 42.3698 5.10855 37.8918C0.630567 33.4139 0.630567 26.1536 5.10855 21.6756L10.514 16.2702C14.9919 11.7922 22.2522 11.7922 26.7302 16.2702L27.4059 16.9459C28.1522 17.6922 28.1522 18.9023 27.4059 19.6486C26.6595 20.3949 25.4495 20.3949 24.7032 19.6486L24.0275 18.9729Z" fill="currentColor"></path>
                         </svg>
                     </span>
                     Звʼязатись з менеджером
-                </a>
+                </button>
                 </div>
             </div>
             
@@ -699,7 +720,7 @@
             <div class="section-white-no-gap text-center" style="border-radius: 0 0 20px 20px;">
                 <h1 style="color: #000000; font-size: 20px;">Залишились запитання?</h1>
                 <div class="btn-center" style="margin-top: 20px;">
-                <a href="https://tinyurl.com/bdde3sps" target="_blank" class="btn-large btn-secondary">
+                <button onclick="openQuiz()" class="btn-large btn-secondary">
                     <span class="btn-icon" style="margin-right: 15px;">
                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 42 42" fill="none">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M19.9729 4.10811C24.4509 -0.369875 31.7112 -0.369875 36.1892 4.10811C40.6672 8.5861 40.6672 15.8463 36.1892 20.3243L30.7838 25.7297C26.3058 30.2077 19.0455 30.2077 14.5675 25.7297L13.8919 25.0541C13.1455 24.3077 13.1455 23.0977 13.8919 22.3514C14.6382 21.605 15.8482 21.605 16.5946 22.3514L17.2702 23.027C20.2556 26.0124 25.0957 26.0124 28.0811 23.027L33.4865 17.6216C36.4718 14.6363 36.4718 9.79614 33.4865 6.81081C30.5011 3.82549 25.661 3.82549 22.6756 6.81081L19.2973 10.1892C18.5509 10.9355 17.3409 10.9355 16.5946 10.1892C15.8482 9.44286 15.8482 8.23282 16.5946 7.48649L19.9729 4.10811Z" fill="currentColor"></path>
@@ -707,7 +728,7 @@
                         </svg>
                     </span>
                     Звʼязатись з менеджером
-                </a>
+                </button>
                 </div>
             </div>
             
@@ -756,7 +777,7 @@
                 <p class="text-purple" style="text-transform: uppercase; font-weight: bold; font-size: 14px;">Ми завжди на зв'язку</p>
                 
                 <div class="btn-center">
-                    <a href="https://tinyurl.com/bdde3sps" target="_blank" class="btn-large btn-secondary">
+                    <button onclick="openQuiz()" class="btn-large btn-secondary">
                         <span class="btn-icon" style="margin-right: 15px;">
                             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 42 42" fill="none">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M19.9729 4.10811C24.4509 -0.369875 31.7112 -0.369875 36.1892 4.10811C40.6672 8.5861 40.6672 15.8463 36.1892 20.3243L30.7838 25.7297C26.3058 30.2077 19.0455 30.2077 14.5675 25.7297L13.8919 25.0541C13.1455 24.3077 13.1455 23.0977 13.8919 22.3514C14.6382 21.605 15.8482 21.605 16.5946 22.3514L17.2702 23.027C20.2556 26.0124 25.0957 26.0124 28.0811 23.027L33.4865 17.6216C36.4718 14.6363 36.4718 9.79614 33.4865 6.81081C30.5011 3.82549 25.661 3.82549 22.6756 6.81081L19.2973 10.1892C18.5509 10.9355 17.3409 10.9355 16.5946 10.1892C15.8482 9.44286 15.8482 8.23282 16.5946 7.48649L19.9729 4.10811Z" fill="currentColor"></path>
@@ -764,7 +785,7 @@
                             </svg>
                         </span>
                         Звʼязатись з менеджером
-                    </a>
+                    </button>
                 </div>
             </div>
             
@@ -842,9 +863,14 @@
                         Ваш менеджер вже чекає на вас!
                     </div>
                 </div>
-                <button class="quiz-next-btn enabled" onclick="redirectToTelegram()" style="background: #0088cc; font-size: 18px; padding: 18px 35px;">
-                    📱 Перейти в телеграм
-                </button>
+                <a href="https://t.me/ancrushabot?start=688b4dc00e5a97b0dc0c7855" target="_blank" class="btn-large btn-secondary" onclick="redirectToTelegram()">
+                    <span class="btn-icon" style="margin-right: 15px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 42 42" fill="none">
+                            <path d="M21 0C9.402 0 0 9.402 0 21s9.402 21 21 21 21-9.402 21-21S32.598 0 21 0zM30.956 14.478c-.247 2.613-1.314 9.223-1.857 12.234-.229 1.272-.681 1.699-1.12 1.74-.951.088-1.674-.629-2.593-1.232-1.437-.944-2.249-1.532-3.643-2.453-1.611-1.064-.567-1.649.351-2.606.24-.25 4.415-4.047 4.498-4.394.01-.043.02-.205-.076-.29-.096-.085-.238-.056-.34-.033-.145.033-2.446 1.554-6.904 4.566-.653.448-1.244.667-1.773.656-.583-.012-1.706-.33-2.541-.601-1.024-.333-1.839-.509-1.769-1.074.036-.293.434-.593 1.194-.9 4.68-2.034 7.8-3.375 9.36-4.023 4.466-1.94 5.39-2.277 5.993-2.287.133-.002.43.031.622.187.163.133.208.312.229.439.021.127.047.416.026.642z" fill="currentColor"/>
+                        </svg>
+                    </span>
+                    Перейти в телеграм
+                </a>
             </div>
         </div>
     </div>
@@ -854,6 +880,11 @@
         let currentQuestion = 0;
 
         function openQuiz() {
+            // Track Meta Pixel event for quiz start
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'InitiateCheckout');
+            }
+            
             document.getElementById('quizModal').style.display = 'block';
             document.body.style.overflow = 'hidden';
             currentQuestion = 1;
@@ -909,29 +940,28 @@
             // Process and log answers
             console.log('Quiz answers:', quizAnswers);
             
+            // Track Meta Pixel event for quiz completion
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'CompleteRegistration');
+            }
+            
             // Hide current question and show results
             document.getElementById('question3').classList.remove('active');
             document.getElementById('quizResults').classList.add('active');
         }
 
         function redirectToTelegram() {
-            // Close quiz and redirect to Telegram
-            closeQuiz();
+            // Track Meta Pixel event
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Contact');
+            }
             
-            // Redirect to the original link
-            window.open('https://tinyurl.com/bdde3sps', '_blank');
+            // Close quiz - the link will handle the redirect
+            closeQuiz();
         }
 
-        // Update all CTA buttons to open quiz instead of direct redirect
-        document.addEventListener('DOMContentLoaded', function() {
-            const ctaButtons = document.querySelectorAll('a[href="https://tinyurl.com/bdde3sps"]');
-            ctaButtons.forEach(button => {
-                button.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    openQuiz();
-                });
-            });
-        });
+        // All CTA buttons now use onclick="openQuiz()" directly
+        // No need for additional event listeners
 
         // Close quiz when clicking outside
         window.onclick = function(event) {
