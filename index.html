@@ -67,7 +67,7 @@
             bottom: 0;
             z-index: 0;
             background: url('./background.jpg');
-            background-size: cover;
+            background-size: auto;
             background-repeat: no-repeat;
             background-position: top center;
         }
@@ -81,21 +81,21 @@
         
         /* Sections */
         .section {
-            margin: 30px 0;
+            margin: 0;
         }
         
         .section-with-bg {
             background: var(--content-background-color);
-            padding: 30px;
+            padding: 20px 40px;
             border-radius: 15px;
-            margin: 30px 0;
+            margin: 0;
         }
         
         .section-white {
             background: #ffffff;
             padding: 30px;
             border-radius: 20px;
-            margin: 30px 0;
+            margin: 0;
         }
         
         /* Typography */
@@ -167,13 +167,16 @@
         }
         
         .logo-container {
+            background: var(--content-background-color);
+            padding: 0 50px;
             text-align: center;
-            padding: 50px 0;
         }
         
         .logo-container img {
-            max-width: 200px;
+            max-width: 50%;
             height: auto;
+            display: block;
+            margin: 0 auto;
         }
         
         /* Buttons */
@@ -181,7 +184,7 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 15px 25px;
+            padding: 10px 16px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
@@ -213,8 +216,8 @@
         }
         
         .btn-icon svg {
-            width: 24px;
-            height: 24px;
+            width: 16px;
+            height: 16px;
         }
         
         .btn-icon svg path {
@@ -224,6 +227,20 @@
         .btn-center {
             text-align: center;
             margin: 20px 0;
+        }
+        
+        .btn-full-width {
+            display: block;
+            width: 100%;
+            max-width: none;
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .btn-full-width .btn {
+            width: 100%;
+            max-width: 100%;
+            justify-content: center;
         }
         
         /* Divider */
@@ -240,11 +257,26 @@
         }
         
         .spacer-medium {
-            height: 40px;
+            height: 60px;
         }
         
         .spacer-large {
             height: 60px;
+        }
+        
+        /* No padding sections */
+        .section-no-padding {
+            background: var(--content-background-color);
+            margin: 0;
+            padding: 30px;
+            border-radius: 0;
+        }
+        
+        .section-transparent {
+            background: rgba(255, 255, 255, 0);
+            margin: 0;
+            padding: 0;
+            border-radius: 0;
         }
         
         /* Features highlight */
@@ -262,8 +294,9 @@
         }
         
         .quote-divider img {
-            max-width: 100px;
+            max-width: 100%;
             height: auto;
+            width: 100%;
         }
         
         /* Contact info */
@@ -277,7 +310,7 @@
         /* Reviews section */
         .reviews-header {
             background: var(--page-background-color);
-            padding: 40px;
+            padding: 40px 40px 20px 40px;
             border-radius: 20px 20px 0 0;
             text-align: center;
         }
@@ -307,8 +340,16 @@
         /* Final CTA section */
         .final-cta {
             background: rgba(255, 255, 255, 0);
+            padding: 0 40px;
+            border-radius: 0 0 6px 6px;
+            text-align: center;
+        }
+        
+        /* CTA with image section */
+        .cta-with-image {
+            background: rgba(255, 255, 255, 0);
             padding: 40px;
-            border-radius: 6px;
+            border-radius: 6px 6px 0 0;
             text-align: center;
         }
         
@@ -361,13 +402,19 @@
                 <img src="./logo.png" alt="Логотип" />
             </div>
             
+            <!-- Highlight Section -->
+            <div class="section-no-padding text-center">
+                <p class="text-small"><strong>❌ Не Онлік | 🚫 Без Інтиму | 💸 Без вкладень</strong></p>
+            </div>
+            
             <!-- Main Hero Section -->
             <div class="section-with-bg text-center">
                 <p>Ми допомагаємо нашим моделям перетворити профіль у пасивний дохід від 500$</p>
             </div>
             
             <!-- CTA Button -->
-            <div class="btn-center">
+            <div class="section-transparent">
+                <div class="btn-full-width">
                 <a href="https://tinyurl.com/bdde3sps" target="_blank" class="btn btn-secondary">
                     <span class="btn-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
@@ -377,58 +424,54 @@
                     </span>
                     Звʼязатись з менеджером
                 </a>
-            </div>
-            
-            <!-- Highlight Section -->
-            <div class="highlight-text text-center">
-                <p class="text-small"><strong>❌ Не Онлік | 🚫 Без Інтиму | 💸 Без вкладень</strong></p>
+                </div>
             </div>
             
             <!-- Profile Image -->
-            <div class="section-white">
+            <div class="section-white" style="border-top-left-radius: 20px; border-top-right-radius: 20px; border-bottom-left-radius: 0; border-bottom-right-radius: 0;">
                 <div class="image-container">
                     <img src="./profile.jpg" alt="Профіль" />
                 </div>
             </div>
             
             <!-- Feature 1 -->
-            <div class="section-white text-center">
+            <div class="section-white text-center" style="border-radius: 0;">
                 <h3>Створення привабливого профілю</h3>
                 <p class="text-dark">Професійне оформлення, якісний контент, унікальний стиль.</p>
             </div>
             
             <!-- Divider -->
-            <div class="section-white">
+            <div class="section-white" style="border-radius: 0;">
                 <div class="divider"></div>
             </div>
             
             <!-- Team Image -->
-            <div class="section-white">
+            <div class="section-white" style="border-radius: 0;">
                 <div class="image-container">
                     <img src="./team.png" alt="Команда" />
                 </div>
             </div>
             
             <!-- Feature 2 -->
-            <div class="section-white text-center">
+            <div class="section-white text-center" style="border-radius: 0;">
                 <h3>Менеджмент акаунта</h3>
                 <p class="text-dark">Ведення сторінки, таргетинг, постійна активність та залучення фанів.</p>
             </div>
             
             <!-- Divider -->
-            <div class="section-white">
+            <div class="section-white" style="border-radius: 0;">
                 <div class="divider"></div>
             </div>
             
             <!-- Gifts Image -->
-            <div class="section-white">
+            <div class="section-white" style="border-radius: 0;">
                 <div class="image-container">
                     <img src="./gifts.png" alt="Подарунки" />
                 </div>
             </div>
             
             <!-- Feature 3 -->
-            <div class="section-white text-center">
+            <div class="section-white text-center" style="border-top-left-radius: 0; border-top-right-radius: 0; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;">
                 <h3>Набір прихильників і монетизація</h3>
                 <p class="text-dark">Партнерські програми, подарунки та додаткові джерела прибутку</p>
             </div>
@@ -437,12 +480,13 @@
             <div class="spacer-large"></div>
             
             <!-- Questions Section -->
-            <div class="text-center">
-                <h1 class="text-small" style="color: #000000; font-size: 20px;">Залишились запитання?</h1>
+            <div class="section-transparent text-center">
+                <h1 style="color: #000000; font-size: 20px;">Залишились запитання?</h1>
             </div>
             
             <!-- CTA Button 2 -->
-            <div class="btn-center">
+            <div class="section-transparent">
+                <div class="btn-full-width">
                 <a href="https://tinyurl.com/bdde3sps" target="_blank" class="btn btn-secondary">
                     <span class="btn-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
@@ -452,6 +496,7 @@
                     </span>
                     Звʼязатись з менеджером
                 </a>
+                </div>
             </div>
             
             <!-- Spacer -->
@@ -490,7 +535,7 @@
             <div class="spacer-medium"></div>
             
             <!-- Contact Image -->
-            <div class="text-center">
+            <div class="cta-with-image">
                 <img src="./background.jpg" alt="Контакти" style="max-width: 100%; border-radius: 6px;" />
             </div>
             
@@ -498,7 +543,7 @@
             <div class="final-cta">
                 <p class="text-purple" style="text-transform: uppercase; font-weight: bold; font-size: 14px;">Ми завжди на зв'язку</p>
                 
-                <div class="btn-center">
+                <div class="btn-full-width">
                     <a href="https://tinyurl.com/bdde3sps" target="_blank" class="btn btn-secondary">
                         <span class="btn-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
